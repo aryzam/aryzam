@@ -2,8 +2,10 @@ name = "aryzam"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
+pages_build_output_dir = ".open-next/cloudflare"
+
 [build]
 command = "npm install --legacy-peer-deps && opennextjs-cloudflare build"
 
-[[pages_build_output_dir]]
-path = ".open-next/cloudflare"
+
+

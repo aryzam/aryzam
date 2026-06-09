@@ -74,7 +74,7 @@ export default function Home() {
 
       {/* ANNOUNCEMENT BAR */}
       <div className="ann-bar">
-        <a href="https://tally.so/r/jazAMQ" target="_blank" style={{color:"#fff",textDecoration:"underline",textUnderlineOffset:"2px"}}>Download the White Paper on Post-Quantum Risk &amp; DORA Compliance →</a>
+        <a href="mailto:ari.zam@princeton.edu" style={{color:"#fff",textDecoration:"underline",textUnderlineOffset:"2px"}}>Download the White Paper on Post-Quantum Risk &amp; DORA Compliance →</a>
         <span data-es="">Descarga el White Paper sobre Riesgo Post-Cuántico y Cumplimiento DORA →</span>
       </div>
 

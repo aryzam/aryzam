@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
 
 export default function Home() {
   const [lang, setLang] = useState<'en' | 'es'>('en');
@@ -80,7 +79,7 @@ export default function Home() {
 
       {/* NAV */}
       <nav>
-        <Link href="/" className="nav-logo">Ary<em>Zam</em></Link>
+        <a href="/" className="nav-logo">Ary<em>Zam</em></a>
         <ul className="nav-links">
           <li><a href="#platform" data-en="">{t('Solutions','Soluciones')}</a></li>
           <li><a href="#compliance" data-en="">{t('Compliance','Cumplimiento')}</a></li>
@@ -338,7 +337,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer>
-        <Link href="/" className="ft-logo">Ary<em>Zam</em></Link>
+        <a href="/" className="ft-logo">Ary<em>Zam</em></a>
         <nav className="ft-links">
           <a href="#platform">{t('Solutions','Soluciones')}</a>
           <a href="#compliance">{t('Compliance','Cumplimiento')}</a>

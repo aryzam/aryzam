@@ -331,7 +331,7 @@ export default function Home() {
               <label className="wl-label">{t('Company','Empresa')}</label>
               <input className="wl-input" type="text" placeholder={t('Your company','Tu empresa')}/>
             </div>
-            <button className="wl-submit">{t('Sign me up →','Apuntarme →')}</button>
+            <button className="wl-submit" data-tally-open="jazAMQ" data-tally-layout="modal">{t('Sign me up →','Apuntarme →')}</button>
           </div>
         </div>
       </section>

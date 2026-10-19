@@ -661,13 +661,27 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
         <label class="wl-label" data-en>I am</label>
         <label class="wl-label" data-es>Soy</label>
         <select class="wl-select" name="role">
-          <option data-en>A company / CISO — I want a scan</option>
-          <option data-es>Una empresa / CISO — quiero un scan</option>
-          <option data-en>An investor — I want to learn more</option>
-          <option data-es>Un inversor — quiero saber más</option>
-          <option data-en>A partner (MSSP / Big 4 / consultancy)</option>
-          <option data-es>Un partner (MSSP / Big 4 / consultoría)</option>
+          <option value="company" data-en>A company / CISO — I want a scan</option>
+          <option value="company" data-es>Una empresa / CISO — quiero un scan</option>
+          <option value="startup" data-en>A startup / SME — exploring options</option>
+          <option value="startup" data-es>Una startup / PYME — explorando opciones</option>
+          <option value="investor" data-en>An investor — I want to learn more</option>
+          <option value="investor" data-es>Un inversor — quiero saber más</option>
+          <option value="partner" data-en>A partner (MSSP / Big 4 / consultancy)</option>
+          <option value="partner" data-es>Un partner (MSSP / Big 4 / consultoría)</option>
+          <option value="researcher" data-en>A researcher / academic</option>
+          <option value="researcher" data-es>Investigador / académico</option>
+          <option value="press" data-en>Press / media</option>
+          <option value="press" data-es>Prensa / medios</option>
+          <option value="other" data-en>Other</option>
+          <option value="other" data-es>Otro</option>
         </select>
+      </div>
+      <div id="other-field" style="display:none">
+        <label class="wl-label" data-en>Please specify</label>
+        <label class="wl-label" data-es>Por favor especifica</label>
+        <input class="wl-input" type="text" name="other_role" placeholder="Your role / organization" data-en/>
+        <input class="wl-input" type="text" name="other_role" placeholder="Tu rol / organización" data-es/>
       </div>
       <div class="wl-row">
         <div>
@@ -711,6 +725,15 @@ function setLang(l){
   document.getElementById('btn-en').classList.toggle('active',l==='en');
   document.getElementById('btn-es').classList.toggle('active',l==='es');
 }
+document.addEventListener('DOMContentLoaded',function(){
+  var sel = document.querySelector('select[name="role"]');
+  var otherField = document.getElementById('other-field');
+  if(sel && otherField){
+    sel.addEventListener('change',function(){
+      otherField.style.display = this.value === 'other' ? 'block' : 'none';
+    });
+  }
+});
 </script>
 <script>
 (function(){

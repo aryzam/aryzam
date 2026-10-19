@@ -4,10 +4,11 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AryZam — Quantum Risk Intelligence</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23121218'/%3E%3Cg transform='translate(9.3 15.1) scale(0.72)'%3E%3Cpath d='M54 50 V66 H34 V34 H74 V86 H14 V14 H96' fill='none' stroke='%23ECEAF5' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='96' cy='14' r='9' fill='%23A78BFA'/%3E%3C/g%3E%3C/svg%3E"/>
 <meta name="description" content="AryZam discovers every cryptographic asset across your cloud, code and identity systems — scored by quantum risk, aligned to DORA and NIS2. Full CBOM in under 24 hours."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -25,7 +26,7 @@
   --text:    #111827;
   --muted:   #4b5563;
   --faint:   #9ca3af;
-  --fd: 'Plus Jakarta Sans', sans-serif;
+  --fd: 'Syne', sans-serif;
   --fb: 'Inter', sans-serif;
 }
 html{scroll-behavior:smooth}
@@ -185,20 +186,28 @@ nav{
 .sh-sub{font-size:0.97rem;color:#6b7280;max-width:560px;line-height:1.75}
 .sh-sub-w{color:#4b5563}
 
-/* ── PLATFORM GRID ── */
-.platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
-.p-card{
-  background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:2rem;
-  transition:box-shadow .2s,border-color .2s;
-}
-.p-card:hover{box-shadow:0 8px 32px rgba(37,99,235,0.1);border-color:#bfdbfe}
-.p-num{font-size:0.65rem;font-weight:700;letter-spacing:0.12em;color:var(--blue);margin-bottom:1rem}
-.p-icon{width:44px;height:44px;border-radius:10px;background:#eff6ff;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
-.p-icon svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.p-card h3{font-family:var(--fd);font-size:1rem;font-weight:700;color:#0a1c42;margin-bottom:0.5rem}
-.p-card p{font-size:0.85rem;color:#6b7280;line-height:1.65}
-.p-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
-.p-tag{font-size:0.65rem;font-weight:500;color:#3b82f6;background:#eff6ff;border:1px solid #bfdbfe;padding:0.18rem 0.6rem;border-radius:4px}
+/* ── PLATFORM GRID (2-col: terminal left, scanners right) ── */
+.platform-grid{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:start}
+@media(max-width:860px){.platform-grid{grid-template-columns:1fr}}
+@media(max-width:780px){#pricing [style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important}}
+
+/* terminal column */
+.term-wrap{background:#0d1117;border-radius:12px;border:1px solid rgba(0,0,0,0.15);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12);position:sticky;top:5rem}
+.term-bar{background:#1c2333;padding:11px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.term-dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+.term-lbl{font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-left:8px}
+
+/* scanner cards column */
+.scanners-col{display:flex;flex-direction:column;gap:0.75rem}
+.s-card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem 1.25rem;display:grid;grid-template-columns:36px 1fr;gap:0.75rem;align-items:start;transition:box-shadow .2s,border-color .2s}
+.s-card:hover{box-shadow:0 4px 20px rgba(37,99,235,0.08);border-color:#bfdbfe}
+.s-icon{width:36px;height:36px;border-radius:8px;background:#eff6ff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.s-icon svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.s-num{font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:0.2rem}
+.s-title{font-size:0.9rem;font-weight:700;color:#0a1c42;margin-bottom:0.3rem}
+.s-desc{font-size:0.78rem;color:#6b7280;line-height:1.5;margin-bottom:0.5rem}
+.s-tags{display:flex;flex-wrap:wrap;gap:0.3rem}
+.s-tag{font-size:0.63rem;font-weight:500;background:#f1f5f9;color:#475569;padding:0.15rem 0.5rem;border-radius:4px;border:1px solid #e2e8f0}
 
 /* ── SCORE SECTION (dark) ── */
 .score-sec{
@@ -303,12 +312,15 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="nav-logo">Ary<em>Zam</em></a>
+  <a href="/" class="nav-logo" style="display:flex;align-items:center">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 308.6 100" height="32" style="display:block"><g transform="translate(-5 1) scale(1)"><path d="M54 50 V66 H34 V34 H74 V86 H14 V14 H96" fill="none" stroke="#121218" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="96" cy="14" r="7" fill="#6D4AFF"/></g><path d="M1.456 0.0 15.235999999999999 -37.44H21.06L8.112 0.0ZM29.692 0.0 16.796 -37.44H22.932L36.66 0.0ZM8.58 -14.716H29.067999999999998V-9.308H8.58Z M40.04 0.0V-26.52H46.43599999999999V-20.124H46.592V0.0ZM46.592 -13.831999999999999 45.916 -20.124Q46.852 -23.503999999999998 49.087999999999994 -25.272Q51.324 -27.04 54.443999999999996 -27.04Q55.536 -27.04 56.004 -26.831999999999997V-20.644Q55.744 -20.747999999999998 55.275999999999996 -20.774Q54.80799999999999 -20.8 54.132 -20.8Q50.336 -20.8 48.464 -19.136Q46.592 -17.471999999999998 46.592 -13.831999999999999Z M61.099999999999994 10.66 67.964 -4.732 69.16 -6.707999999999999 76.648 -26.52H83.616L67.756 10.66ZM66.976 -0.26 56.211999999999996 -26.52H63.336L72.332 -2.7039999999999997Z M80.60000000000001 0.0V-4.68L101.712 -34.788L103.53200000000001 -32.083999999999996H81.224V-37.44H108.47200000000001V-32.76L87.56800000000001 -2.912L85.80000000000001 -5.356H108.784V0.0Z M128.232 0.0Q127.97200000000001 -1.04 127.84200000000001 -2.2880000000000003Q127.712 -3.536 127.712 -5.303999999999999H127.504V-17.887999999999998Q127.504 -19.968 126.334 -21.034Q125.164 -22.099999999999998 122.772 -22.099999999999998Q120.432 -22.099999999999998 119.054 -21.241999999999997Q117.676 -20.384 117.364 -18.772H111.072Q111.488 -22.464 114.608 -24.752Q117.72800000000001 -27.04 122.98 -27.04Q128.44 -27.04 131.248 -24.57Q134.056 -22.099999999999998 134.056 -17.316V-5.303999999999999Q134.056 -4.056 134.238 -2.7560000000000002Q134.42000000000002 -1.456 134.784 0.0ZM119.028 0.52Q115.024 0.52 112.658 -1.482Q110.292 -3.484 110.292 -6.864Q110.292 -10.504 112.944 -12.636Q115.596 -14.767999999999999 120.432 -15.495999999999999L128.7 -16.744V-12.584L121.524 -11.491999999999999Q119.184 -11.128 118.01400000000001 -10.192Q116.84400000000001 -9.256 116.84400000000001 -7.592Q116.84400000000001 -6.084 117.936 -5.278Q119.028 -4.4719999999999995 120.952 -4.4719999999999995Q123.76 -4.4719999999999995 125.632 -5.8759999999999994Q127.504 -7.279999999999999 127.504 -9.308L128.232 -5.303999999999999Q127.19200000000001 -2.444 124.82600000000001 -0.962Q122.46000000000001 0.52 119.028 0.52Z M139.15200000000002 0.0V-26.52H145.548V-20.279999999999998H145.704V0.0ZM156.988 0.0V-17.108Q156.988 -19.448 155.81799999999998 -20.566Q154.648 -21.683999999999997 152.51600000000002 -21.683999999999997Q150.644 -21.683999999999997 149.084 -20.799999999999997Q147.524 -19.916 146.614 -18.304000000000002Q145.704 -16.692 145.704 -14.559999999999999L145.02800000000002 -20.644Q146.38 -23.555999999999997 148.928 -25.298Q151.476 -27.04 154.856 -27.04Q158.912 -27.04 161.252 -24.726Q163.592 -22.412 163.592 -18.772V0.0ZM174.824 0.0V-17.108Q174.824 -19.448 173.68 -20.566Q172.536 -21.683999999999997 170.404 -21.683999999999997Q168.48000000000002 -21.683999999999997 166.92000000000002 -20.799999999999997Q165.36 -19.916 164.476 -18.304000000000002Q163.592 -16.692 163.592 -14.559999999999999L162.448 -20.644Q163.748 -23.555999999999997 166.4 -25.298Q169.05200000000002 -27.04 172.536 -27.04Q176.696 -27.04 179.062 -24.674Q181.428 -22.308 181.428 -18.407999999999998V0.0Z" fill="#121218" transform="translate(120 68.72)"/></svg>
+  </a>
   <ul class="nav-links">
     <li><a href="#platform" data-en>Solutions</a><a href="#platform" data-es>Soluciones</a></li>
     <li><a href="#compliance" data-en>Compliance</a><a href="#compliance" data-es>Cumplimiento</a></li>
     <li><a href="#why" data-en>Why AryZam</a><a href="#why" data-es>Por qué AryZam</a></li>
-    <li><a href="#team" data-en>About</a><a href="#team" data-es>Equipo</a></li>
+    <li><a href="#team" data-en>Team</a><a href="#team" data-es>Equipo</a></li>
+    <li><a href="#pricing" data-en>Pricing</a><a href="#pricing" data-es>Precios</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-toggle">
@@ -316,8 +328,8 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
       <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
     </div>
     <a href="#waitlist" class="nav-cta">
-      <span data-en>Join the waitlist</span>
-      <span data-es>Lista de espera</span>
+      <span data-en>Get your risk report →</span>
+      <span data-es>Obtén tu informe de riesgo →</span>
     </a>
   </div>
 </nav>
@@ -332,10 +344,24 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
   <h1 data-es>Alguien está grabando tu<br/><em>tráfico cifrado</em> ahora mismo.</h1>
   <p class="hero-sub" data-en>In 2029 they'll be able to read it. Migration takes 3 years. Most companies have no idea how many vulnerable cryptographic assets they have — or where.</p>
   <p class="hero-sub" data-es>En 2029 podrán leerlo. La migración tarda 3 años. La mayoría de empresas no sabe cuántos activos criptográficos vulnerables tiene — ni dónde están.</p>
+  <div class="hero-impact" data-en>
+    <span class="hi-stat"><span class="hi-n">118</span><span class="hi-l">cryptographic assets found</span></span>
+    <span class="hi-div"></span>
+    <span class="hi-stat"><span class="hi-n hi-red">31</span><span class="hi-l">critical — migrate now</span></span>
+    <span class="hi-div"></span>
+    <span class="hi-stat"><span class="hi-n">4 hrs</span><span class="hi-l">to full inventory</span></span>
+  </div>
+  <div class="hero-impact" data-es>
+    <span class="hi-stat"><span class="hi-n">118</span><span class="hi-l">activos criptográficos encontrados</span></span>
+    <span class="hi-div"></span>
+    <span class="hi-stat"><span class="hi-n hi-red">31</span><span class="hi-l">críticos — migrar ya</span></span>
+    <span class="hi-div"></span>
+    <span class="hi-stat"><span class="hi-n">4 h</span><span class="hi-l">para inventario completo</span></span>
+  </div>
   <div class="hero-btns">
     <a href="#waitlist" class="btn-hero-p">
-      <span data-en>Schedule Quantum Risk Assessment →</span>
-      <span data-es>Solicitar Evaluación de Riesgo Cuántico →</span>
+      <span data-en>Get your risk report in 24h →</span>
+      <span data-es>Obtén tu informe de riesgo en 24h →</span>
     </a>
     <a href="#platform" class="btn-hero-o">
       <span data-en>See the Scanner in Action</span>
@@ -354,7 +380,23 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
 
 </section>
 
-<style>@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}</style>
+<style>
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-impact{
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+  margin:1.5rem 0 0;
+  padding:1.2rem 1.5rem;
+  background:rgba(26,86,219,0.06);
+  border:1px solid rgba(26,86,219,0.15);
+  border-radius:10px;
+  max-width:560px;
+}
+.hi-stat{display:flex;flex-direction:column;gap:0.15rem}
+.hi-n{font-family:var(--fd);font-size:1.6rem;font-weight:800;color:var(--blue);line-height:1}
+.hi-n.hi-red{color:#dc2626}
+.hi-l{font-size:0.72rem;font-weight:500;color:var(--muted);letter-spacing:0.02em;text-transform:uppercase}
+.hi-div{width:1px;height:2.5rem;background:rgba(26,86,219,0.2);flex-shrink:0}
+</style>
 
 <!-- STATS (white) -->
 <div class="stats">
@@ -371,57 +413,73 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
   <div class="sh">
     <div class="sh-label" data-en>The platform</div>
     <div class="sh-label" data-es>La plataforma</div>
-    <h2 class="sh-title" data-en>Map. Prioritize. Prove.</h2>
-    <h2 class="sh-title" data-es>Mapa. Prioridad. Cumplimiento.</h2>
-    <p class="sh-sub" data-en>First inventory delivered in under 24 hours. Read-only access, metadata-only, GDPR DPA included. No agents installed. No disruption.</p>
-    <p class="sh-sub" data-es>Primer inventario entregado en menos de 24 horas. Acceso de solo lectura, solo metadatos, DPA GDPR incluido. Sin agentes. Sin interrupciones.</p>
+    <h2 class="sh-title" data-en>Find every vulnerable key before quantum does.</h2>
+    <h2 class="sh-title" data-es>Encuentra cada clave vulnerable antes de que lo haga el quantum.</h2>
+    <p class="sh-sub" data-en>Full cryptographic inventory in under 24 hours. Read-only access, no agents, GDPR DPA included.</p>
+    <p class="sh-sub" data-es>Inventario criptográfico completo en menos de 24 horas. Acceso de solo lectura, sin agentes, DPA GDPR incluido.</p>
   </div>
   <div class="platform-grid">
-    <div class="p-card">
-      <div class="p-num" data-en>01 — CLOUD SCANNER</div><div class="p-num" data-es>01 — ESCÁNER CLOUD</div>
-      <div class="p-icon"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
-      <h3 data-en>Cloud infrastructure</h3><h3 data-es>Infraestructura cloud</h3>
-      <p data-en>Every key, certificate and encryption policy across AWS KMS, Azure Key Vault and GCP Cloud KMS — all regions simultaneously.</p>
-      <p data-es>Cada clave, certificado y política de cifrado en AWS KMS, Azure Key Vault y GCP Cloud KMS — todas las regiones simultáneamente.</p>
-      <div class="p-tags"><span class="p-tag">AWS KMS</span><span class="p-tag">Azure Key Vault</span><span class="p-tag">GCP Cloud KMS</span><span class="p-tag">ACM</span></div>
-    </div>
-    <div class="p-card">
-      <div class="p-num" data-en>02 — IDENTITY SCANNER</div><div class="p-num" data-es>02 — ESCÁNER DE IDENTIDAD</div>
-      <div class="p-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-      <h3 data-en>Identity layer</h3><h3 data-es>Capa de identidad</h3>
-      <p data-en>Microsoft 365 S/MIME, Active Directory certificates, GitHub and GitLab SSH keys, Linux authorized_keys — the human attack surface.</p>
-      <p data-es>M365 S/MIME, certificados de Active Directory, claves SSH de GitHub y GitLab, Linux authorized_keys — la superficie de ataque humana.</p>
-      <div class="p-tags"><span class="p-tag">M365</span><span class="p-tag">Active Directory</span><span class="p-tag">GitHub SSH</span><span class="p-tag">Linux</span></div>
-    </div>
-    <div class="p-card">
-      <div class="p-num" data-en>03 — CODE SCANNER</div><div class="p-num" data-es>03 — ESCÁNER DE CÓDIGO</div>
-      <div class="p-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-      <h3 data-en>Source code</h3><h3 data-es>Código fuente</h3>
-      <p data-en>60+ regex patterns across Python, Java, JS/TS, Go, C/C++ — detects hardcoded RSA key sizes, MD5/SHA-1 usage and insecure key generation.</p>
-      <p data-es>Más de 60 patrones regex en Python, Java, JS/TS, Go, C/C++ — detecta RSA hardcodeado, MD5/SHA-1 y generación insegura de claves.</p>
-      <div class="p-tags"><span class="p-tag">Python</span><span class="p-tag">Java</span><span class="p-tag">JS/TS</span><span class="p-tag">Go</span><span class="p-tag">C/C++</span></div>
-    </div>
-    <div class="p-card">
-      <div class="p-num" data-en>04 — DEPENDENCY SCANNER</div><div class="p-num" data-es>04 — ESCÁNER DE DEPENDENCIAS</div>
-      <div class="p-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-      <h3 data-en>Dependencies</h3><h3 data-es>Dependencias</h3>
-      <p data-en>35+ vulnerable libraries matched against safe-version thresholds across pip, npm, Maven, Go modules and Cargo — the blind spot most teams miss.</p>
-      <p data-es>Más de 35 librerías vulnerables en pip, npm, Maven, Go modules y Cargo — el punto ciego que la mayoría ignora.</p>
-      <div class="p-tags"><span class="p-tag">requirements.txt</span><span class="p-tag">package.json</span><span class="p-tag">pom.xml</span><span class="p-tag">go.mod</span><span class="p-tag">Cargo.toml</span></div>
-    </div>
-  </div>
-  <!-- TERMINAL DEMO -->
-  <div style="margin-top:3.5rem;max-width:860px">
-    <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem" data-en>See it in action — live scan output</div>
-    <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem" data-es>Vélo en acción — salida de escaneo en vivo</div>
-    <div style="background:#0d1117;border-radius:12px;border:1px solid rgba(0,0,0,0.15);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12)">
-      <div style="background:#1c2333;padding:11px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,0.07)">
-        <span style="width:11px;height:11px;border-radius:50%;background:#ff5f57;display:inline-block"></span>
-        <span style="width:11px;height:11px;border-radius:50%;background:#febc2e;display:inline-block"></span>
-        <span style="width:11px;height:11px;border-radius:50%;background:#28c840;display:inline-block"></span>
-        <span style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-left:8px">aryzam-scanner — bash</span>
+    <!-- LEFT: Terminal (sticky) -->
+    <div>
+      <div style="margin-bottom:0.75rem">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--blue);margin-bottom:0.3rem" data-en>⬤&nbsp; Live scan output</div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--blue);margin-bottom:0.3rem" data-es>⬤&nbsp; Salida de escaneo en vivo</div>
+        <div style="font-size:0.8rem;color:#6b7280" data-en>Real output from an AryZam scan — anonymised client data</div>
+        <div style="font-size:0.8rem;color:#6b7280" data-es>Salida real de un escaneo AryZam — datos de cliente anonimizados</div>
       </div>
-      <div id="terminal" style="font-family:'Courier New',Courier,monospace;font-size:13px;line-height:1.8;padding:22px 26px;color:#e2e8f0;min-height:60px"></div>
+    <div class="term-wrap">
+      <div class="term-bar">
+        <span class="term-dot" style="background:#ff5f57"></span>
+        <span class="term-dot" style="background:#febc2e"></span>
+        <span class="term-dot" style="background:#28c840"></span>
+        <span class="term-lbl">aryzam-scanner — bash</span>
+      </div>
+      <div id="terminal" style="font-family:'Courier New',Courier,monospace;font-size:13px;line-height:1.8;padding:22px 26px;color:#e2e8f0;min-height:340px"></div>
+    </div>
+    </div>
+
+    <!-- RIGHT: Scanner cards stacked -->
+    <div class="scanners-col">
+      <div class="s-card">
+        <div class="s-icon"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <div>
+          <div class="s-num" data-en>01 — Cloud Scanner</div><div class="s-num" data-es>01 — Escáner Cloud</div>
+          <div class="s-title" data-en>Cloud infrastructure</div><div class="s-title" data-es>Infraestructura cloud</div>
+          <div class="s-desc" data-en>Every key, certificate and encryption policy across AWS KMS, Azure Key Vault and GCP Cloud KMS — all regions simultaneously.</div>
+          <div class="s-desc" data-es>Cada clave, certificado y política de cifrado en AWS KMS, Azure Key Vault y GCP — todas las regiones simultáneamente.</div>
+          <div class="s-tags"><span class="s-tag">AWS KMS</span><span class="s-tag">Azure Key Vault</span><span class="s-tag">GCP Cloud KMS</span><span class="s-tag">ACM</span></div>
+        </div>
+      </div>
+      <div class="s-card">
+        <div class="s-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div>
+          <div class="s-num" data-en>02 — Identity Scanner</div><div class="s-num" data-es>02 — Escáner de Identidad</div>
+          <div class="s-title" data-en>Identity layer</div><div class="s-title" data-es>Capa de identidad</div>
+          <div class="s-desc" data-en>Microsoft 365 S/MIME, Active Directory certificates, GitHub and GitLab SSH keys, Linux authorized_keys — the human attack surface.</div>
+          <div class="s-desc" data-es>M365 S/MIME, certificados de AD, claves SSH de GitHub y GitLab, Linux authorized_keys — la superficie de ataque humana.</div>
+          <div class="s-tags"><span class="s-tag">M365</span><span class="s-tag">Active Directory</span><span class="s-tag">GitHub SSH</span><span class="s-tag">Linux</span></div>
+        </div>
+      </div>
+      <div class="s-card">
+        <div class="s-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div>
+          <div class="s-num" data-en>03 — Code Scanner</div><div class="s-num" data-es>03 — Escáner de Código</div>
+          <div class="s-title" data-en>Source code</div><div class="s-title" data-es>Código fuente</div>
+          <div class="s-desc" data-en>60+ regex patterns across Python, Java, JS/TS, Go, C/C++ — detects hardcoded RSA key sizes, MD5/SHA-1 usage and insecure key generation.</div>
+          <div class="s-desc" data-es>60+ patrones regex en Python, Java, JS/TS, Go, C/C++ — detecta RSA hardcodeado, MD5/SHA-1 y generación insegura de claves.</div>
+          <div class="s-tags"><span class="s-tag">Python</span><span class="s-tag">Java</span><span class="s-tag">JS/TS</span><span class="s-tag">Go</span><span class="s-tag">C/C++</span></div>
+        </div>
+      </div>
+      <div class="s-card">
+        <div class="s-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <div>
+          <div class="s-num" data-en>04 — Dependency Scanner</div><div class="s-num" data-es>04 — Escáner de Dependencias</div>
+          <div class="s-title" data-en>Dependencies</div><div class="s-title" data-es>Dependencias</div>
+          <div class="s-desc" data-en>35+ vulnerable libraries matched against safe-version thresholds across pip, npm, Maven, Go modules and Cargo — the blind spot most teams miss.</div>
+          <div class="s-desc" data-es>35+ librerías vulnerables en pip, npm, Maven, Go modules y Cargo — el punto ciego que la mayoría ignora.</div>
+          <div class="s-tags"><span class="s-tag">requirements.txt</span><span class="s-tag">package.json</span><span class="s-tag">pom.xml</span><span class="s-tag">go.mod</span><span class="s-tag">Cargo.toml</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -495,10 +553,10 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
   <div class="sh">
     <div class="sh-label" data-en>Why AryZam</div>
     <div class="sh-label" data-es>Por qué AryZam</div>
-    <h2 class="sh-title" data-en>The market leaders validated the problem.<br/>They left the mid-market behind.</h2>
-    <h2 class="sh-title" data-es>Los líderes validaron el problema.<br/>Dejaron atrás al mid-market.</h2>
-    <p class="sh-sub" data-en>SandboxAQ and IBM Quantum Safe have proven enterprises will pay for PQC discovery — with six-figure contracts targeting Fortune 500 and government. That validation is our tailwind. 10,000+ mid-market firms under DORA/NIS2 have no option priced for them.</p>
-    <p class="sh-sub" data-es>SandboxAQ e IBM Quantum Safe han demostrado que las empresas pagan por PQC — con contratos de seis cifras para Fortune 500 y gobierno. Esa validación es nuestro viento a favor. Más de 10.000 empresas mid-market bajo DORA/NIS2 no tienen ninguna opción a su precio.</p>
+    <h2 class="sh-title" data-en>DORA and NIS2 require a cryptographic inventory.<br/>Most tools aren't built for you.</h2>
+    <h2 class="sh-title" data-es>DORA y NIS2 exigen un inventario criptográfico.<br/>La mayoría de herramientas no son para ti.</h2>
+    <p class="sh-sub" data-en>SandboxAQ and IBM Quantum Safe serve Fortune 500 and government — months of integration, six-figure contracts. AryZam delivers the same depth for mid-market firms under DORA/NIS2: full CBOM, physics-based scoring, first report in under 24 hours.</p>
+    <p class="sh-sub" data-es>SandboxAQ e IBM Quantum Safe sirven al Fortune 500 y gobiernos — meses de integración, contratos de seis cifras. AryZam entrega la misma profundidad para empresas mid-market bajo DORA/NIS2: CBOM completo, scoring basado en física, primer informe en menos de 24 horas.</p>
   </div>
 
   <!-- Comparison table -->
@@ -510,7 +568,7 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
             data-en>Dimension</th>
           <th data-es style="padding:1rem 1.25rem;text-align:left;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#9ca3af;font-weight:700;width:22%">Dimensión</th>
           <th style="padding:1rem 1.25rem;text-align:center;background:#eff6ff;border-left:2px solid var(--blue);border-right:2px solid var(--blue)">
-            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:800;color:#0a1c42">Ary<span style="color:var(--blue)">Zam</span></span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 308.6 100" height="22" style="display:block;margin:0 auto"><g transform="translate(-5 1) scale(1)"><path d="M54 50 V66 H34 V34 H74 V86 H14 V14 H96" fill="none" stroke="#121218" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="96" cy="14" r="7" fill="#6D4AFF"/></g><path d="M1.456 0.0 15.235999999999999 -37.44H21.06L8.112 0.0ZM29.692 0.0 16.796 -37.44H22.932L36.66 0.0ZM8.58 -14.716H29.067999999999998V-9.308H8.58Z M40.04 0.0V-26.52H46.43599999999999V-20.124H46.592V0.0ZM46.592 -13.831999999999999 45.916 -20.124Q46.852 -23.503999999999998 49.087999999999994 -25.272Q51.324 -27.04 54.443999999999996 -27.04Q55.536 -27.04 56.004 -26.831999999999997V-20.644Q55.744 -20.747999999999998 55.275999999999996 -20.774Q54.80799999999999 -20.8 54.132 -20.8Q50.336 -20.8 48.464 -19.136Q46.592 -17.471999999999998 46.592 -13.831999999999999Z M61.099999999999994 10.66 67.964 -4.732 69.16 -6.707999999999999 76.648 -26.52H83.616L67.756 10.66ZM66.976 -0.26 56.211999999999996 -26.52H63.336L72.332 -2.7039999999999997Z M80.60000000000001 0.0V-4.68L101.712 -34.788L103.53200000000001 -32.083999999999996H81.224V-37.44H108.47200000000001V-32.76L87.56800000000001 -2.912L85.80000000000001 -5.356H108.784V0.0Z M128.232 0.0Q127.97200000000001 -1.04 127.84200000000001 -2.2880000000000003Q127.712 -3.536 127.712 -5.303999999999999H127.504V-17.887999999999998Q127.504 -19.968 126.334 -21.034Q125.164 -22.099999999999998 122.772 -22.099999999999998Q120.432 -22.099999999999998 119.054 -21.241999999999997Q117.676 -20.384 117.364 -18.772H111.072Q111.488 -22.464 114.608 -24.752Q117.72800000000001 -27.04 122.98 -27.04Q128.44 -27.04 131.248 -24.57Q134.056 -22.099999999999998 134.056 -17.316V-5.303999999999999Q134.056 -4.056 134.238 -2.7560000000000002Q134.42000000000002 -1.456 134.784 0.0ZM119.028 0.52Q115.024 0.52 112.658 -1.482Q110.292 -3.484 110.292 -6.864Q110.292 -10.504 112.944 -12.636Q115.596 -14.767999999999999 120.432 -15.495999999999999L128.7 -16.744V-12.584L121.524 -11.491999999999999Q119.184 -11.128 118.01400000000001 -10.192Q116.84400000000001 -9.256 116.84400000000001 -7.592Q116.84400000000001 -6.084 117.936 -5.278Q119.028 -4.4719999999999995 120.952 -4.4719999999999995Q123.76 -4.4719999999999995 125.632 -5.8759999999999994Q127.504 -7.279999999999999 127.504 -9.308L128.232 -5.303999999999999Q127.19200000000001 -2.444 124.82600000000001 -0.962Q122.46000000000001 0.52 119.028 0.52Z M139.15200000000002 0.0V-26.52H145.548V-20.279999999999998H145.704V0.0ZM156.988 0.0V-17.108Q156.988 -19.448 155.81799999999998 -20.566Q154.648 -21.683999999999997 152.51600000000002 -21.683999999999997Q150.644 -21.683999999999997 149.084 -20.799999999999997Q147.524 -19.916 146.614 -18.304000000000002Q145.704 -16.692 145.704 -14.559999999999999L145.02800000000002 -20.644Q146.38 -23.555999999999997 148.928 -25.298Q151.476 -27.04 154.856 -27.04Q158.912 -27.04 161.252 -24.726Q163.592 -22.412 163.592 -18.772V0.0ZM174.824 0.0V-17.108Q174.824 -19.448 173.68 -20.566Q172.536 -21.683999999999997 170.404 -21.683999999999997Q168.48000000000002 -21.683999999999997 166.92000000000002 -20.799999999999997Q165.36 -19.916 164.476 -18.304000000000002Q163.592 -16.692 163.592 -14.559999999999999L162.448 -20.644Q163.748 -23.555999999999997 166.4 -25.298Q169.05200000000002 -27.04 172.536 -27.04Q176.696 -27.04 179.062 -24.674Q181.428 -22.308 181.428 -18.407999999999998V0.0Z" fill="#121218" transform="translate(120 68.72)"/></svg>
           </th>
           <th style="padding:1rem 1.25rem;text-align:center;color:#6b7280;font-weight:600">SandboxAQ<br/><span style="font-size:0.72rem;font-weight:400;color:#9ca3af">Alphabet · $1B+</span></th>
           <th style="padding:1rem 1.25rem;text-align:center;color:#6b7280;font-weight:600">IBM<br/><span style="font-size:0.72rem;font-weight:400;color:#9ca3af">Quantum Safe</span></th>
@@ -647,15 +705,130 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
   </div>
 </section>
 
+<!-- PRICING -->
+<section id="pricing" style="padding:5rem 5%;background:#f8faff">
+  <div style="max-width:1100px;margin:0 auto">
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:3rem">
+      <div class="sh-label" data-en>Pricing</div>
+      <div class="sh-label" data-es>Precios</div>
+      <h2 class="sh-title" data-en>Know your quantum exposure.<br/>Pay for what you scan.</h2>
+      <h2 class="sh-title" data-es>Conoce tu exposición cuántica.<br/>Paga por lo que escaneas.</h2>
+      <p class="sh-sub" data-en>Transparent pricing for mid-market teams under DORA and NIS2. No integrations, no agents, no surprises.</p>
+      <p class="sh-sub" data-es>Precios transparentes para equipos mid-market bajo DORA y NIS2. Sin integraciones, sin agentes, sin sorpresas.</p>
+    </div>
+
+    <!-- Cards -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;align-items:stretch">
+
+      <!-- Starter -->
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:2rem;display:flex;flex-direction:column;gap:0">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280;margin-bottom:0.5rem" data-en>Starter</div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280;margin-bottom:0.5rem" data-es>Starter</div>
+        <div style="font-size:2.4rem;font-weight:800;font-family:var(--fd);color:#0a1c42;line-height:1">€2,900</div>
+        <div style="font-size:0.8rem;color:#6b7280;margin-top:0.3rem;margin-bottom:1.5rem" data-en>one-time scan · billed once</div>
+        <div style="font-size:0.8rem;color:#6b7280;margin-top:0.3rem;margin-bottom:1.5rem" data-es>escaneo único · facturado una vez</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.65rem;margin-bottom:2rem;flex:1">
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>1 cloud integration (AWS, Azure or GCP)</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>1 integración cloud (AWS, Azure o GCP)</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>Up to 500 cryptographic assets</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>Hasta 500 activos criptográficos</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>Quantum risk score per asset</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>Puntuación de riesgo cuántico por activo</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>CBOM export (PDF)</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>Exportación CBOM (PDF)</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>Report delivered in 24 hours</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>Informe entregado en 24 horas</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>GDPR DPA included</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>DPA GDPR incluido</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#9ca3af" data-en><span style="flex-shrink:0">–</span>No recurring scans</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#9ca3af" data-es><span style="flex-shrink:0">–</span>Sin escaneos recurrentes</li>
+        </ul>
+        <a href="#waitlist" style="display:block;text-align:center;padding:0.75rem;border:1.5px solid #1a56db;border-radius:8px;font-size:0.875rem;font-weight:700;color:#1a56db;text-decoration:none;transition:background .15s,color .15s" onmouseover="this.style.background='#1a56db';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#1a56db'">
+          <span data-en>Request a scan →</span>
+          <span data-es>Solicitar escaneo →</span>
+        </a>
+      </div>
+
+      <!-- Professional (highlighted) -->
+      <div style="background:linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 100%);border:none;border-radius:14px;padding:2rem;display:flex;flex-direction:column;gap:0;position:relative;box-shadow:0 12px 40px rgba(29,78,216,0.3)">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:#6d4aff;color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:0 0 8px 8px" data-en>Most popular</div>
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:#6d4aff;color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:0 0 8px 8px" data-es>Más popular</div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;margin-top:0.75rem" data-en>Professional</div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;margin-top:0.75rem" data-es>Profesional</div>
+        <div style="font-size:2.4rem;font-weight:800;font-family:var(--fd);color:#fff;line-height:1">€7,900</div>
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:0.3rem;margin-bottom:1.5rem" data-en>per year · billed annually</div>
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:0.3rem;margin-bottom:1.5rem" data-es>por año · facturación anual</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.65rem;margin-bottom:2rem;flex:1">
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>3 cloud integrations + M365 / AD identity</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>3 integraciones cloud + identidad M365 / AD</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>Unlimited cryptographic assets</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>Activos criptográficos ilimitados</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>Full CBOM + migration playbook</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>CBOM completo + playbook de migración</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>Bi-monthly scans</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>Escaneos bimensuales</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>Code + dependency scanner</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>Escáner de código y dependencias</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>DORA / NIS2 compliance report</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>Informe de cumplimiento DORA / NIS2</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>Slack + email support</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>Soporte por Slack y email</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>GDPR DPA included</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>DPA GDPR incluido</li>
+        </ul>
+        <a href="#waitlist" style="display:block;text-align:center;padding:0.75rem;background:#fff;border-radius:8px;font-size:0.875rem;font-weight:700;color:#1d4ed8;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+          <span data-en>Get started →</span>
+          <span data-es>Empezar →</span>
+        </a>
+      </div>
+
+      <!-- Enterprise -->
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:2rem;display:flex;flex-direction:column;gap:0">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280;margin-bottom:0.5rem" data-en>Enterprise</div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280;margin-bottom:0.5rem" data-es>Enterprise</div>
+        <div style="font-size:2.4rem;font-weight:800;font-family:var(--fd);color:#0a1c42;line-height:1" data-en>Custom</div>
+        <div style="font-size:2.4rem;font-weight:800;font-family:var(--fd);color:#0a1c42;line-height:1" data-es>A medida</div>
+        <div style="font-size:0.8rem;color:#6b7280;margin-top:0.3rem;margin-bottom:1.5rem" data-en>tailored to your environment</div>
+        <div style="font-size:0.8rem;color:#6b7280;margin-top:0.3rem;margin-bottom:1.5rem" data-es>adaptado a tu entorno</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.65rem;margin-bottom:2rem;flex:1">
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>Unlimited cloud + on-prem integrations</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>Integraciones cloud + on-prem ilimitadas</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>Continuous scanning, no limits</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>Escaneo continuo sin límites</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>Full CBOM + SIEM integration</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>CBOM completo + integración SIEM</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>Guaranteed SLA + dedicated CSM</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>SLA garantizado + CSM dedicado</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>GDPR DPA + executive briefing</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>GDPR DPA + informe ejecutivo</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-en><span style="color:#1a56db;flex-shrink:0">✓</span>Dedicated onboarding</li>
+          <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#374151" data-es><span style="color:#1a56db;flex-shrink:0">✓</span>Onboarding dedicado</li>
+        </ul>
+        <a href="mailto:ari.zam@princeton.edu" style="display:block;text-align:center;padding:0.75rem;border:1.5px solid #1a56db;border-radius:8px;font-size:0.875rem;font-weight:700;color:#1a56db;text-decoration:none;transition:background .15s,color .15s" onmouseover="this.style.background='#1a56db';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#1a56db'">
+          <span data-en>Talk to us →</span>
+          <span data-es>Contactar →</span>
+        </a>
+      </div>
+
+    </div><!-- /cards grid -->
+
+    <!-- Footnote -->
+    <p style="text-align:center;margin-top:2rem;font-size:0.78rem;color:#9ca3af" data-en>All plans use read-only access — no agents installed on your infrastructure. VAT not included. Enterprise-grade depth, mid-market price.</p>
+    <p style="text-align:center;margin-top:2rem;font-size:0.78rem;color:#9ca3af" data-es>Todos los planes usan acceso de solo lectura — sin agentes instalados en tu infraestructura. IVA no incluido. Profundidad enterprise, precio mid-market.</p>
+
+  </div>
+</section>
+
 <!-- WAITLIST (dark) -->
 <section class="wl-sec" id="waitlist">
   <div class="wl-inner">
     <div class="sh-label" data-en>Join us</div>
     <div class="sh-label" data-es>Únete</div>
-    <h2 data-en>Be first to know<br/>your quantum risk</h2>
-    <h2 data-es>Sé el primero en conocer<br/>tu riesgo cuántico</h2>
-    <p class="wl-sub" data-en>Be the first to know. Join the waitlist — companies seeking a scan and early investors.</p>
-    <p class="wl-sub" data-es>Sé el primero en saberlo. Únete a la lista de espera — empresas e inversores tempranos.</p>
+    <h2 data-en>Get your risk report<br/>in 24 hours.</h2>
+    <h2 data-es>Obtén tu informe de riesgo<br/>en 24 horas.</h2>
+    <p class="wl-sub" data-en>Request a scan — we'll map your full cryptographic surface and deliver a prioritized report. Also open to early investors.</p>
+    <p class="wl-sub" data-es>Solicita un escaneo — mapeamos toda tu superficie criptográfica y entregamos un informe priorizado. También abierto a inversores.</p>
     <div id="wl-success" style="display:none;padding:2rem 0;text-align:center">
       <div style="font-size:2.5rem;margin-bottom:1rem">✅</div>
       <p style="color:#fff;font-size:1.1rem;font-weight:600" data-en>You're on the list! We'll be in touch soon.</p>
@@ -706,15 +879,17 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
         <input class="wl-input" type="text" name="company" placeholder="Your company" data-en/>
         <input class="wl-input" type="text" name="company" placeholder="Tu empresa" data-es/>
       </div>
-      <button class="wl-submit" type="submit" data-en>Sign me up →</button>
-      <button class="wl-submit" type="submit" data-es>Apuntarme →</button>
+      <button class="wl-submit" type="submit" data-en>Get my risk report →</button>
+      <button class="wl-submit" type="submit" data-es>Obtener mi informe de riesgo →</button>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <a href="/" class="ft-logo">Ary<em>Zam</em></a>
+  <a href="/" class="ft-logo" style="display:flex;align-items:center">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 308.6 100" height="28" style="display:block"><g transform="translate(-5 1) scale(1)"><path d="M54 50 V66 H34 V34 H74 V86 H14 V14 H96" fill="none" stroke="#ECEAF5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="96" cy="14" r="7" fill="#A78BFA"/></g><path d="M1.456 0.0 15.235999999999999 -37.44H21.06L8.112 0.0ZM29.692 0.0 16.796 -37.44H22.932L36.66 0.0ZM8.58 -14.716H29.067999999999998V-9.308H8.58Z M40.04 0.0V-26.52H46.43599999999999V-20.124H46.592V0.0ZM46.592 -13.831999999999999 45.916 -20.124Q46.852 -23.503999999999998 49.087999999999994 -25.272Q51.324 -27.04 54.443999999999996 -27.04Q55.536 -27.04 56.004 -26.831999999999997V-20.644Q55.744 -20.747999999999998 55.275999999999996 -20.774Q54.80799999999999 -20.8 54.132 -20.8Q50.336 -20.8 48.464 -19.136Q46.592 -17.471999999999998 46.592 -13.831999999999999Z M61.099999999999994 10.66 67.964 -4.732 69.16 -6.707999999999999 76.648 -26.52H83.616L67.756 10.66ZM66.976 -0.26 56.211999999999996 -26.52H63.336L72.332 -2.7039999999999997Z M80.60000000000001 0.0V-4.68L101.712 -34.788L103.53200000000001 -32.083999999999996H81.224V-37.44H108.47200000000001V-32.76L87.56800000000001 -2.912L85.80000000000001 -5.356H108.784V0.0Z M128.232 0.0Q127.97200000000001 -1.04 127.84200000000001 -2.2880000000000003Q127.712 -3.536 127.712 -5.303999999999999H127.504V-17.887999999999998Q127.504 -19.968 126.334 -21.034Q125.164 -22.099999999999998 122.772 -22.099999999999998Q120.432 -22.099999999999998 119.054 -21.241999999999997Q117.676 -20.384 117.364 -18.772H111.072Q111.488 -22.464 114.608 -24.752Q117.72800000000001 -27.04 122.98 -27.04Q128.44 -27.04 131.248 -24.57Q134.056 -22.099999999999998 134.056 -17.316V-5.303999999999999Q134.056 -4.056 134.238 -2.7560000000000002Q134.42000000000002 -1.456 134.784 0.0ZM119.028 0.52Q115.024 0.52 112.658 -1.482Q110.292 -3.484 110.292 -6.864Q110.292 -10.504 112.944 -12.636Q115.596 -14.767999999999999 120.432 -15.495999999999999L128.7 -16.744V-12.584L121.524 -11.491999999999999Q119.184 -11.128 118.01400000000001 -10.192Q116.84400000000001 -9.256 116.84400000000001 -7.592Q116.84400000000001 -6.084 117.936 -5.278Q119.028 -4.4719999999999995 120.952 -4.4719999999999995Q123.76 -4.4719999999999995 125.632 -5.8759999999999994Q127.504 -7.279999999999999 127.504 -9.308L128.232 -5.303999999999999Q127.19200000000001 -2.444 124.82600000000001 -0.962Q122.46000000000001 0.52 119.028 0.52Z M139.15200000000002 0.0V-26.52H145.548V-20.279999999999998H145.704V0.0ZM156.988 0.0V-17.108Q156.988 -19.448 155.81799999999998 -20.566Q154.648 -21.683999999999997 152.51600000000002 -21.683999999999997Q150.644 -21.683999999999997 149.084 -20.799999999999997Q147.524 -19.916 146.614 -18.304000000000002Q145.704 -16.692 145.704 -14.559999999999999L145.02800000000002 -20.644Q146.38 -23.555999999999997 148.928 -25.298Q151.476 -27.04 154.856 -27.04Q158.912 -27.04 161.252 -24.726Q163.592 -22.412 163.592 -18.772V0.0ZM174.824 0.0V-17.108Q174.824 -19.448 173.68 -20.566Q172.536 -21.683999999999997 170.404 -21.683999999999997Q168.48000000000002 -21.683999999999997 166.92000000000002 -20.799999999999997Q165.36 -19.916 164.476 -18.304000000000002Q163.592 -16.692 163.592 -14.559999999999999L162.448 -20.644Q163.748 -23.555999999999997 166.4 -25.298Q169.05200000000002 -27.04 172.536 -27.04Q176.696 -27.04 179.062 -24.674Q181.428 -22.308 181.428 -18.407999999999998V0.0Z" fill="#ECEAF5" transform="translate(120 68.72)"/></svg>
+  </a>
   <nav class="ft-links">
     <a href="#platform" data-en>Solutions</a><a href="#platform" data-es>Soluciones</a>
     <a href="#compliance" data-en>Compliance</a><a href="#compliance" data-es>Cumplimiento</a>
@@ -766,59 +941,80 @@ document.addEventListener('DOMContentLoaded',function(){
 (function(){
   var term = document.getElementById('terminal');
   if(!term) return;
-  function cyan(s){return'<span style="color:#1d4ed8">'+s+'</span>'}
-  function green(s){return'<span style="color:#15803d">'+s+'</span>'}
-  function red(s){return'<span style="color:#dc2626">'+s+'</span>'}
-  function orange(s){return'<span style="color:#d97706">'+s+'</span>'}
-  function purple(s){return'<span style="color:#7c3aed">'+s+'</span>'}
-  function muted(s){return'<span style="color:#9ca3af">'+s+'</span>'}
+  function cyan(s){return'<span style="color:#60a5fa">'+s+'</span>'}
+  function green(s){return'<span style="color:#4ade80">'+s+'</span>'}
+  function red(s){return'<span style="color:#f87171">'+s+'</span>'}
+  function orange(s){return'<span style="color:#fb923c">'+s+'</span>'}
+  function purple(s){return'<span style="color:#c084fc">'+s+'</span>'}
+  function muted(s){return'<span style="color:#6b7280">'+s+'</span>'}
   function bold(s){return'<span style="font-weight:700">'+s+'</span>'}
+  function dim(s){return'<span style="color:#4b5563">'+s+'</span>'}
+  var SEP = dim('─────────────────────────────────────────────');
   var lines=[
-    {t:0,    h:muted('$')+' python main.py --mode live --codescan ./repo --deps-scan ./repo'},
-    {t:600,  h:''},
-    {t:800,  h:cyan('checkmark')+' [1/4] Scanning cryptographic assets...'},
-    {t:1400, h:'  '+muted('arrow')+' AWS KMS + ACM:         '+cyan('14 assets')+' '+muted('(eu-west-1, us-east-1, ap-southeast-1)')},
-    {t:1900, h:'  '+muted('arrow')+' Azure Key Vault:       '+cyan('11 assets')+' '+muted('(westeurope, northeurope)')},
-    {t:2400, h:'  '+muted('arrow')+' M365 S/MIME certs:     '+cyan('50 assets')},
-    {t:2900, h:'  '+muted('arrow')+' GitHub SSH keys:       '+cyan('23 assets')},
-    {t:3400, h:'  '+muted('arrow')+' Source code scan:      '+orange('8 findings')+' '+muted('(RSA-1024 keygen, hardcoded SHA-1)')},
-    {t:3900, h:'  '+muted('arrow')+' Dependency scan:       '+orange('12 findings')+' '+muted('(cryptography<41.0, paramiko<3.4)')},
-    {t:4400, h:''},
-    {t:4600, h:cyan('checkmark')+' [2/4] Quantum Advantage Matrix scoring...'},
-    {t:5400, h:'  '+red(bold('CRITICAL: 31'))+'   '+orange('HIGH: 28')+'   '+muted('MEDIUM: 17')+'   '+purple('HNDL targets: 49')},
-    {t:5900, h:''},
-    {t:6100, h:cyan('checkmark')+' [3/4] Generating reports...'},
-    {t:6600, h:'  '+muted('arrow')+' dashboard.html  report.pdf  playbook.md  cbom.json'},
-    {t:7100, h:''},
-    {t:7300, h:green('checkmark')+' [4/4] '+bold('Done.')+' '+cyan('118 assets')+' scored. First inventory ready.'},
-    {t:7900, h:''},
-    {t:8100, h:'  '+red('!')+' '+bold(red('31 CRITICAL'))+' assets require immediate migration'},
-    {t:8500, h:'  '+purple('!')+' '+bold(purple('49 HNDL targets'))+' -- traffic being recorded today'},
-    {t:8900, h:'  '+orange('>')+' DORA/NIS2 compliance: '+red(bold('NON-COMPLIANT'))},
-    {t:9400, h:'  '+cyan('>')+' Migration playbook: '+cyan('playbook.md')+' '+muted('(FIPS 203/204/205 aligned)')},
-    {t:10000,h:''},
-    {t:10200,h:muted('$')+' _'},
+    {t:0,    h:muted('$')+' aryzam-scanner --target acme-corp --live'},
+    {t:500,  h:''},
+    {t:700,  h:SEP},
+    {t:900,  h:cyan('✦')+' '+'<span style="color:#e2e8f0;font-weight:600">[1/4] DISCOVERY</span>  '+muted('scanning cryptographic surface...')},
+    {t:1100, h:SEP},
+    {t:1500, h:'  '+muted('·')+' AWS KMS + ACM       '+cyan('14')+'  '+muted('eu-west-1 · us-east-1 · ap-southeast-1')},
+    {t:2000, h:'  '+muted('·')+' Azure Key Vault      '+cyan('11')+'  '+muted('westeurope · northeurope')},
+    {t:2500, h:'  '+muted('·')+' M365 S/MIME certs    '+cyan('50')+'  '+muted('Exchange Online')},
+    {t:3000, h:'  '+muted('·')+' GitHub SSH keys      '+cyan('23')+'  '+muted('org: acme-corp')},
+    {t:3500, h:'  '+muted('·')+' Source code (60+ patterns)  '+orange('8 findings')+'  '+muted('RSA-1024, SHA-1')},
+    {t:4000, h:'  '+muted('·')+' Dependencies         '+orange('12 findings')+'  '+muted('cryptography<41.0, paramiko<3.4')},
+    {t:4500, h:''},
+    {t:4700, h:SEP},
+    {t:4900, h:cyan('✦')+' '+'<span style="color:#e2e8f0;font-weight:600">[2/4] QUANTUM RISK SCORING</span>  '+muted('QAM algorithm...')},
+    {t:5100, h:SEP},
+    {t:5800, h:'  '+red(bold('● CRITICAL  31'))+'   '+orange('● HIGH  28')+'   '+'<span style="color:#e2e8f0">● MEDIUM  17</span>'+'   '+purple('● HNDL  49')},
+    {t:6300, h:''},
+    {t:6500, h:SEP},
+    {t:6700, h:cyan('✦')+' '+'<span style="color:#e2e8f0;font-weight:600">[3/4] REPORT GENERATION</span>'},
+    {t:6900, h:SEP},
+    {t:7200, h:'  '+muted('·')+' '+'<span style="color:#60a5fa">dashboard.html</span>  <span style="color:#60a5fa">report.pdf</span>  <span style="color:#60a5fa">playbook.md</span>  <span style="color:#60a5fa">cbom.json</span>'},
+    {t:7700, h:''},
+    {t:7900, h:SEP},
+    {t:8100, h:green('✓')+' '+'<span style="color:#e2e8f0;font-weight:700">[4/4] DONE — 118 assets scored</span>'},
+    {t:8300, h:SEP},
+    {t:8700, h:'  '+red('▲')+' '+bold(red('31 CRITICAL'))+'  immediate migration required'},
+    {t:9100, h:'  '+purple('▲')+' '+bold(purple('49 HNDL'))+'    harvest-now-decrypt-later exposure'},
+    {t:9500, h:'  '+orange('▲')+' DORA/NIS2  '+red(bold('NON-COMPLIANT'))},
+    {t:9900, h:''},
+    {t:10100,h:muted('$')+' _'},
   ];
   lines = lines.map(function(l){
     return {t:l.t, h:l.h.replace(/checkmark/g,'&#10003;').replace(/arrow/g,'&rarr;')};
   });
   var started = false;
+  var timers = [];
   function runAnimation(){
     if(started) return;
     started = true;
+    term.innerHTML = '';
     var rendered = '';
     lines.forEach(function(l){
-      setTimeout(function(){
+      var id = setTimeout(function(){
         rendered += l.h + '\n';
         term.innerHTML = rendered;
         term.scrollTop = term.scrollHeight;
       }, l.t);
+      timers.push(id);
     });
   }
+  function resetAndRun(){
+    timers.forEach(clearTimeout);
+    timers = [];
+    started = false;
+    runAnimation();
+  }
+  // Allow replay on click of "See the Scanner in Action" button
+  document.querySelectorAll('a[href="#platform"]').forEach(function(a){
+    a.addEventListener('click', function(){ setTimeout(resetAndRun, 600); });
+  });
   if('IntersectionObserver' in window){
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if(e.isIntersecting){ runAnimation(); obs.disconnect(); }});
-    },{threshold:0.3});
+    },{threshold:0.1, rootMargin:'0px 0px -50px 0px'});
     obs.observe(term);
   } else { runAnimation(); }
 })();

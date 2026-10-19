@@ -400,11 +400,32 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
 
 <!-- STATS (white) -->
 <div class="stats">
+  <!-- Context bridge -->
+  <div style="text-align:center;max-width:640px;margin:0 auto 3rem">
+    <p style="font-size:1.05rem;font-weight:600;color:#0a1c42;line-height:1.5" data-en>Your encryption has an expiry date.<br/>Most companies don't know it yet.</p>
+    <p style="font-size:1.05rem;font-weight:600;color:#0a1c42;line-height:1.5" data-es>Tu cifrado tiene fecha de caducidad.<br/>La mayoría de empresas aún no lo sabe.</p>
+  </div>
   <div class="stats-grid">
-    <div><div class="stat-n">~2029</div><div class="stat-l" data-en>Estimated CRQC availability — IBM &amp; Google roadmaps</div><div class="stat-l" data-es>Disponibilidad estimada del CRQC — roadmaps IBM y Google</div></div>
-    <div><div class="stat-n">4M+</div><div class="stat-l" data-en>TLS certificates exposed globally to quantum risk</div><div class="stat-l" data-es>Certificados TLS expuestos al riesgo cuántico globalmente</div></div>
-    <div><div class="stat-n">3 yrs</div><div class="stat-l" data-en>Average migration timeline per NIST estimates</div><div class="stat-l" data-es>Tiempo medio de migración según estimaciones NIST</div></div>
-    <div><div class="stat-n">30%</div><div class="stat-l" data-en>Organizations with a full cryptographic inventory — IBM IBV, 2025</div><div class="stat-l" data-es>Organizaciones con inventario criptográfico completo — IBM IBV, 2025</div></div>
+    <div>
+      <div class="stat-n">~2029</div>
+      <div class="stat-l" data-en>The year quantum computers could break today's encryption — IBM &amp; Google roadmaps</div>
+      <div class="stat-l" data-es>El año en que los ordenadores cuánticos podrían romper el cifrado actual — IBM &amp; Google</div>
+    </div>
+    <div>
+      <div class="stat-n">4M+</div>
+      <div class="stat-l" data-en>Digital certificates already being harvested by adversaries waiting for quantum — today, not 2029</div>
+      <div class="stat-l" data-es>Certificados digitales ya recopilados por adversarios esperando el salto cuántico — hoy, no en 2029</div>
+    </div>
+    <div>
+      <div class="stat-n">3 yrs</div>
+      <div class="stat-l" data-en>Average time to migrate cryptography per NIST. If you start today, you arrive just in time.</div>
+      <div class="stat-l" data-es>Tiempo medio de migración según NIST. Si empiezas hoy, llegas justo a tiempo.</div>
+    </div>
+    <div>
+      <div class="stat-n">30%</div>
+      <div class="stat-l" data-en>Companies with a complete inventory of their cryptographic assets. The other 70% are blind — IBM IBV, 2025</div>
+      <div class="stat-l" data-es>Empresas con un inventario completo de sus activos criptográficos. El 70% restante opera a ciegas — IBM IBV, 2025</div>
+    </div>
   </div>
 </div>
 
@@ -744,7 +765,7 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
           <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#9ca3af" data-en><span style="flex-shrink:0">–</span>No recurring scans</li>
           <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#9ca3af" data-es><span style="flex-shrink:0">–</span>Sin escaneos recurrentes</li>
         </ul>
-        <a href="#waitlist" style="display:block;text-align:center;padding:0.75rem;border:1.5px solid #1a56db;border-radius:8px;font-size:0.875rem;font-weight:700;color:#1a56db;text-decoration:none;transition:background .15s,color .15s" onmouseover="this.style.background='#1a56db';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#1a56db'">
+        <a href="#waitlist" data-plan="Starter — €2,900 (one-time scan)" class="pricing-cta" style="display:block;text-align:center;padding:0.75rem;border:1.5px solid #1a56db;border-radius:8px;font-size:0.875rem;font-weight:700;color:#1a56db;text-decoration:none;transition:background .15s,color .15s" onmouseover="this.style.background='#1a56db';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#1a56db'">
           <span data-en>Request a scan →</span>
           <span data-es>Solicitar escaneo →</span>
         </a>
@@ -777,7 +798,7 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
           <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-en><span style="color:#a5f3fc;flex-shrink:0">✓</span>GDPR DPA included</li>
           <li style="display:flex;gap:0.6rem;font-size:0.85rem;color:#e0e7ff" data-es><span style="color:#a5f3fc;flex-shrink:0">✓</span>DPA GDPR incluido</li>
         </ul>
-        <a href="#waitlist" style="display:block;text-align:center;padding:0.75rem;background:#fff;border-radius:8px;font-size:0.875rem;font-weight:700;color:#1d4ed8;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+        <a href="#waitlist" data-plan="Professional — €7,900/year" class="pricing-cta" style="display:block;text-align:center;padding:0.75rem;background:#fff;border-radius:8px;font-size:0.875rem;font-weight:700;color:#1d4ed8;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
           <span data-en>Get started →</span>
           <span data-es>Empezar →</span>
         </a>
@@ -835,6 +856,13 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
       <p style="color:#fff;font-size:1.1rem;font-weight:600" data-es>¡Estás en la lista! Te contactaremos pronto.</p>
     </div>
     <form class="wl-form" id="wl-form" action="https://formspree.io/f/xyekajby" method="POST">
+      <!-- Plan badge — shown when coming from pricing -->
+      <div id="plan-badge" style="display:none;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:8px;padding:0.65rem 1rem;margin-bottom:1rem;display:none;align-items:center;gap:0.6rem">
+        <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6)" data-en>Selected plan</span>
+        <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6)" data-es>Plan seleccionado</span>
+        <span style="margin-left:auto;font-size:0.85rem;font-weight:700;color:#fff" id="plan-badge-text"></span>
+      </div>
+      <input type="hidden" name="plan" id="plan-input" value=""/>
       <div>
         <label class="wl-label" data-en>I am</label>
         <label class="wl-label" data-es>Soy</label>
@@ -900,6 +928,22 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
 </footer>
 
 <script>
+// Pricing CTA → pre-fill plan in waitlist form
+document.querySelectorAll('.pricing-cta').forEach(function(a){
+  a.addEventListener('click', function(){
+    var plan = this.getAttribute('data-plan');
+    if(!plan) return;
+    var badge = document.getElementById('plan-badge');
+    var badgeText = document.getElementById('plan-badge-text');
+    var input = document.getElementById('plan-input');
+    if(badge && badgeText && input){
+      badgeText.textContent = plan;
+      input.value = plan;
+      badge.style.display = 'flex';
+    }
+  });
+});
+
 function setLang(l){
   document.getElementById('root').className='lang-'+l;
   document.getElementById('btn-en').classList.toggle('active',l==='en');

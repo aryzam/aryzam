@@ -240,3 +240,9 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
   .score-inner{grid-template-columns:1fr;gap:3rem}
   .wl-row{grid-template-columns:1fr}
 }
+
+/* Hide Tally injected container */
+[data-tally-overlay], .tally-default-popup-overlay { display: none !important; }
+iframe[src*="tally.so"] { display: none !important; }
+
+footer nav.ft-links{background:transparent;border-bottom:none;padding:0;height:auto;position:static;z-index:auto}

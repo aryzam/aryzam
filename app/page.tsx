@@ -309,28 +309,6 @@ export default function Home() {
           <h2>{t('How many vulnerable assets','¿Cuántos activos vulnerables')}<br/>{t('do you have in production?','tienes en producción?')}</h2>
           <p className="wl-sub">{t('Be the first to know. Join the waitlist — companies seeking a scan and early investors.','Sé el primero en saberlo. Únete a la lista de espera — empresas e inversores tempranos.')}</p>
           <div className="wl-form">
-            <div>
-              <label className="wl-label">{t('I am','Soy')}</label>
-              <select className="wl-select">
-                <option>{t('A company / CISO — I want a scan','Una empresa / CISO — quiero un scan')}</option>
-                <option>{t('An investor — I want to learn more','Un inversor — quiero saber más')}</option>
-                <option>{t('A partner (MSSP / Big 4 / consultancy)','Un partner (MSSP / Big 4 / consultoría)')}</option>
-              </select>
-            </div>
-            <div className="wl-row">
-              <div>
-                <label className="wl-label">{t('Name','Nombre')}</label>
-                <input className="wl-input" type="text" placeholder={t('Your name','Tu nombre')}/>
-              </div>
-              <div>
-                <label className="wl-label">Email</label>
-                <input className="wl-input" type="email" placeholder="you@company.com"/>
-              </div>
-            </div>
-            <div>
-              <label className="wl-label">{t('Company','Empresa')}</label>
-              <input className="wl-input" type="text" placeholder={t('Your company','Tu empresa')}/>
-            </div>
             <button className="wl-submit" data-tally-open="jazAMQ" data-tally-layout="modal">{t('Sign me up →','Apuntarme →')}</button>
           </div>
         </div>

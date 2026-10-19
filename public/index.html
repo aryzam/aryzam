@@ -4,32 +4,32 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AryZam — Quantum Risk Intelligence</title>
-<meta name="description" content="AryZam discovers every cryptographic asset across your cloud, code and identity systems — scored by quantum risk, aligned to DORA and NIS2. Full CBOM in under 5 minutes."/>
+<meta name="description" content="AryZam discovers every cryptographic asset across your cloud, code and identity systems — scored by quantum risk, aligned to DORA and NIS2. Full CBOM in under 24 hours."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:    #071330;
-  --navy2:   #0a1c42;
-  --navy3:   #0d2254;
-  --surface: #0f2761;
-  --card:    #0c1d4a;
-  --border:  rgba(255,255,255,0.08);
-  --border2: rgba(255,255,255,0.14);
-  --blue:    #2563eb;
+  --navy:    #ffffff;
+  --navy2:   #f0f4ff;
+  --navy3:   #e8eeff;
+  --surface: #f8faff;
+  --card:    #ffffff;
+  --border:  rgba(0,0,0,0.08);
+  --border2: rgba(0,0,0,0.14);
+  --blue:    #1a56db;
   --blue-l:  #3b82f6;
-  --cyan:    #00d4a0;
+  --cyan:    #1a56db;
   --white:   #ffffff;
-  --text:    #e8eef8;
-  --muted:   #8fa3c8;
-  --faint:   #3d5480;
+  --text:    #111827;
+  --muted:   #4b5563;
+  --faint:   #9ca3af;
   --fd: 'Plus Jakarta Sans', sans-serif;
   --fb: 'Inter', sans-serif;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--fb);background:var(--navy);color:var(--white);-webkit-font-smoothing:antialiased;line-height:1.6}
+body{font-family:var(--fb);background:#ffffff;color:#111827;-webkit-font-smoothing:antialiased;line-height:1.6}
 
 /* ── LANG ── */
 .lang-en [data-es]{display:none!important}
@@ -68,25 +68,25 @@ nav{
 
 /* ── HERO ── */
 .hero{
-  background:linear-gradient(160deg, var(--navy) 0%, var(--navy2) 40%, var(--navy3) 100%);
+  background:linear-gradient(160deg, #1e3a8a 0%, #1d4ed8 40%, #2563eb 100%);
   padding:5.5rem 5% 0;
   text-align:center;
   position:relative;overflow:hidden;
 }
 .hero::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(37,99,235,0.18) 0%,transparent 65%);
+  background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(255,255,255,0.12) 0%,transparent 65%);
   pointer-events:none;
 }
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:0.5rem;
   font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
-  color:#93c5fd;
-  border:1px solid rgba(147,197,253,0.3);
+  color:#bfdbfe;
+  border:1px solid rgba(191,219,254,0.4);
   padding:0.3rem 1rem;border-radius:100px;
   margin-bottom:1.75rem;
 }
-.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:#93c5fd;flex-shrink:0}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:#bfdbfe;flex-shrink:0}
 .hero h1{
   font-family:var(--fd);
   font-size:clamp(2.6rem,5.5vw,4.2rem);
@@ -96,7 +96,7 @@ nav{
 }
 .hero h1 em{font-style:normal;color:#60a5fa}
 .hero-sub{
-  font-size:1.1rem;color:var(--muted);
+  font-size:1.1rem;color:rgba(255,255,255,0.82);
   max-width:600px;margin:0 auto 2.5rem;line-height:1.75;
 }
 .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.25rem}
@@ -112,18 +112,18 @@ nav{
 .btn-hero-o{
   font-size:0.95rem;font-weight:600;
   padding:0.85rem 2rem;
-  background:transparent;color:#fff;
+  background:rgba(255,255,255,0.12);color:#fff;
   border-radius:8px;text-decoration:none;
-  border:2px solid rgba(255,255,255,0.3);
-  transition:border-color .15s;
+  border:2px solid rgba(255,255,255,0.35);
+  transition:border-color .15s,background .15s;
 }
-.btn-hero-o:hover{border-color:rgba(255,255,255,0.6)}
+.btn-hero-o:hover{border-color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.2)}
 .hero-compliance{
   display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;
   margin-bottom:4rem;
 }
-.hero-compliance-label{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--faint)}
-.cpill{font-size:0.72rem;font-weight:500;color:var(--faint);border:1px solid var(--faint);padding:0.2rem 0.7rem;border-radius:4px}
+.hero-compliance-label{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
+.cpill{font-size:0.72rem;font-weight:500;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.25);padding:0.2rem 0.7rem;border-radius:4px}
 
 /* ── DASHBOARD MOCKUP ── */
 .hero-mockup{
@@ -181,9 +181,9 @@ nav{
 .sh{margin-bottom:3.5rem}
 .sh-label{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:0.7rem;font-weight:700}
 .sh-title{font-family:var(--fd);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-0.025em;color:#0a1c42;margin-bottom:0.9rem}
-.sh-title-w{color:#fff}
+.sh-title-w{color:#0f172a}
 .sh-sub{font-size:0.97rem;color:#6b7280;max-width:560px;line-height:1.75}
-.sh-sub-w{color:var(--muted)}
+.sh-sub-w{color:#4b5563}
 
 /* ── PLATFORM GRID ── */
 .platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
@@ -202,17 +202,17 @@ nav{
 
 /* ── SCORE SECTION (dark) ── */
 .score-sec{
-  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
+  background:linear-gradient(135deg,#f0f4ff 0%,#e8eeff 100%);
   padding:6rem 5%;
 }
 .score-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .score-bars{display:flex;flex-direction:column;gap:1.1rem}
 .sc-row-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem}
-.sc-asset{font-size:0.82rem;font-weight:500;color:var(--text)}
+.sc-asset{font-size:0.82rem;font-weight:500;color:#111827}
 .sc-val{font-size:0.9rem;font-weight:700}
-.sc-track{height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden}
+.sc-track{height:6px;background:#e5e7eb;border-radius:3px;overflow:hidden}
 .sc-fill{height:100%;border-radius:3px}
-.sc-sub{font-size:0.68rem;color:var(--faint);margin-top:0.25rem}
+.sc-sub{font-size:0.68rem;color:#9ca3af;margin-top:0.25rem}
 .sc-badge{font-size:0.58rem;font-weight:700;padding:0.12rem 0.5rem;border-radius:3px;margin-left:0.4rem}
 .b-hndl{background:rgba(168,85,247,.18);color:#a855f7}
 .b-crit{background:rgba(239,68,68,.18);color:#ef4444}
@@ -261,30 +261,30 @@ nav{
 
 /* ── WAITLIST (dark) ── */
 .wl-sec{
-  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
+  background:linear-gradient(135deg,#f0f4ff 0%,#e8eeff 100%);
   padding:7rem 5%;text-align:center;
 }
 .wl-inner{max-width:620px;margin:0 auto}
-.wl-sec h2{font-family:var(--fd);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.025em;color:#fff;margin-bottom:1rem}
-.wl-sub{font-size:.97rem;color:var(--muted);margin-bottom:2.5rem;line-height:1.75}
+.wl-sec h2{font-family:var(--fd);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.025em;color:#fff;margin-bottom:1rem;text-shadow:0 1px 3px rgba(0,0,0,0.15)}
+.wl-sub{font-size:.97rem;color:rgba(255,255,255,.75);margin-bottom:2.5rem;line-height:1.75}
 .wl-form{display:flex;flex-direction:column;gap:1rem;text-align:left}
 .wl-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.wl-label{font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.4rem}
-.wl-input{width:100%;padding:.75rem 1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:7px;color:#fff;font-size:.9rem;font-family:var(--fb);outline:none;transition:border-color .2s}
-.wl-input:focus{border-color:rgba(59,130,246,.6)}
-.wl-input::placeholder{color:var(--faint)}
-.wl-select{width:100%;padding:.75rem 1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:7px;color:var(--muted);font-size:.9rem;font-family:var(--fb);outline:none;cursor:pointer;-webkit-appearance:none;appearance:none}
-.wl-submit{width:100%;padding:.9rem;background:var(--blue);color:#fff;font-size:.95rem;font-weight:700;font-family:var(--fb);border:none;border-radius:7px;cursor:pointer;transition:background .15s}
-.wl-submit:hover{background:#1d4ed8}
+.wl-label{font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.7);display:block;margin-bottom:.4rem}
+.wl-input{width:100%;padding:.75rem 1rem;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:7px;color:#fff;font-size:.9rem;font-family:var(--fb);outline:none;transition:border-color .2s}
+.wl-input:focus{border-color:rgba(255,255,255,.7)}
+.wl-input::placeholder{color:rgba(255,255,255,.45)}
+.wl-select{width:100%;padding:.75rem 1rem;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:7px;color:rgba(255,255,255,.85);font-size:.9rem;font-family:var(--fb);outline:none;cursor:pointer;-webkit-appearance:none;appearance:none}
+.wl-submit{width:100%;padding:.9rem;background:#fff;color:#1a56db;font-size:.95rem;font-weight:700;font-family:var(--fb);border:none;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
+.wl-submit:hover{background:#f0f4ff}
 
 /* ── FOOTER ── */
-footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5rem 5%;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem}
-.ft-logo{font-family:var(--fd);font-size:1.1rem;font-weight:800;color:rgba(255,255,255,.5);text-decoration:none}
-.ft-logo em{font-style:normal;color:#60a5fa}
+footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5rem 5%;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem}
+.ft-logo{font-family:var(--fd);font-size:1.1rem;font-weight:800;color:rgba(255,255,255,.75);text-decoration:none}
+.ft-logo em{font-style:normal;color:#bfdbfe}
 .ft-links{display:flex;gap:1.75rem}
-.ft-links a{font-size:.78rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color .15s}
-.ft-links a:hover{color:rgba(255,255,255,.6)}
-.ft-copy{font-size:.75rem;color:rgba(255,255,255,.25);width:100%;margin-top:.5rem}
+.ft-links a{font-size:.78rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .15s}
+.ft-links a:hover{color:rgba(255,255,255,.9)}
+.ft-copy{font-size:.75rem;color:rgba(255,255,255,.4);width:100%;margin-top:.5rem}
 
 @media(max-width:780px){
   .nav-links{display:none}
@@ -343,8 +343,8 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     </a>
   </div>
   <div class="hero-compliance">
-    <span class="hero-compliance-label" data-en>Aligned with</span>
-    <span class="hero-compliance-label" data-es>Alineado con</span>
+    <span class="hero-compliance-label" data-en>Reports map to</span>
+    <span class="hero-compliance-label" data-es>Informes mapeados a</span>
     <span class="cpill">DORA</span>
     <span class="cpill">NIS2</span>
     <span class="cpill">NIST FIPS 203/204/205</span>
@@ -352,68 +352,8 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     <span class="cpill">ENISA PQC</span>
   </div>
 
-  <!-- TERMINAL -->
-  <div style="max-width:780px;margin:0 auto;padding-bottom:0">
-    <div style="background:#0d1117;border-radius:12px 12px 0 0;border:1px solid rgba(255,255,255,0.1);border-bottom:none;overflow:hidden;box-shadow:0 -16px 60px rgba(37,99,235,0.18)">
-      <div style="background:#1c2333;padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,0.07)">
-        <span style="width:11px;height:11px;border-radius:50%;background:#ff5f57;display:inline-block"></span>
-        <span style="width:11px;height:11px;border-radius:50%;background:#febc2e;display:inline-block"></span>
-        <span style="width:11px;height:11px;border-radius:50%;background:#28c840;display:inline-block"></span>
-        <span style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-left:8px">aryzam-scanner — bash</span>
-      </div>
-      <div id="terminal" style="font-family:'Courier New',Courier,monospace;font-size:13px;line-height:1.8;padding:24px 28px;min-height:280px;color:#e2e8f0"></div>
-    </div>
-  </div>
 </section>
 
-<script>
-(function(){
-  var term = document.getElementById('terminal');
-  if(!term) return;
-  function cyan(s){return'<span style="color:#38bdf8">'+s+'</span>'}
-  function green(s){return'<span style="color:#4ade80">'+s+'</span>'}
-  function red(s){return'<span style="color:#f87171">'+s+'</span>'}
-  function orange(s){return'<span style="color:#fb923c">'+s+'</span>'}
-  function purple(s){return'<span style="color:#c084fc">'+s+'</span>'}
-  function muted(s){return'<span style="color:#4b5563">'+s+'</span>'}
-  function bold(s){return'<span style="font-weight:700">'+s+'</span>'}
-  var lines=[
-    {t:0,    h:muted('$')+' python main.py --mode live --codescan ./repo --deps-scan ./repo'},
-    {t:600,  h:''},
-    {t:800,  h:cyan('✓')+' [1/4] Scanning cryptographic assets...'},
-    {t:1400, h:'  '+muted('→')+' AWS KMS + ACM:         '+cyan('14 assets')+' '+muted('(eu-west-1, us-east-1, ap-southeast-1)')},
-    {t:1900, h:'  '+muted('→')+' Azure Key Vault:       '+cyan('11 assets')+' '+muted('(westeurope, northeurope)')},
-    {t:2400, h:'  '+muted('→')+' M365 S/MIME certs:     '+cyan('50 assets')},
-    {t:2900, h:'  '+muted('→')+' GitHub SSH keys:       '+cyan('23 assets')},
-    {t:3400, h:'  '+muted('→')+' Source code scan:      '+orange('8 findings')+' '+muted('(RSA-1024 keygen, hardcoded SHA-1)')},
-    {t:3900, h:'  '+muted('→')+' Dependency scan:       '+orange('12 findings')+' '+muted('(cryptography<41.0, paramiko<3.4)')},
-    {t:4400, h:''},
-    {t:4600, h:cyan('✓')+' [2/4] Quantum Advantage Matrix scoring...'},
-    {t:5400, h:'  '+red(bold('CRITICAL: 31'))+'   '+orange('HIGH: 28')+'   '+muted('MEDIUM: 17')+'   '+purple('HNDL targets: 49')},
-    {t:5900, h:''},
-    {t:6100, h:cyan('✓')+' [3/4] Generating reports...'},
-    {t:6600, h:'  '+muted('→')+' dashboard.html · report.pdf · playbook.md · cbom.json'},
-    {t:7100, h:''},
-    {t:7300, h:green('✓')+' [4/4] '+bold('Done.')+' '+cyan('118 assets')+' scored in '+bold('4.2s')},
-    {t:7900, h:''},
-    {t:8100, h:'  '+red('⚠')+'  '+bold(red('31 CRITICAL'))+' assets require immediate migration'},
-    {t:8500, h:'  '+purple('⚠')+'  '+bold(purple('49 HNDL targets'))+' — traffic being recorded today'},
-    {t:8900, h:'  '+orange('→')+'  DORA/NIS2 compliance: '+red(bold('NON-COMPLIANT'))},
-    {t:9400, h:'  '+cyan('→')+'  Migration playbook: '+cyan('playbook.md')+' '+muted('(FIPS 203/204/205 aligned)')},
-    {t:10000,h:''},
-    {t:10200,h:muted('$')+' <span id="cur" style="border-right:2px solid #e2e8f0;animation:blink 1s step-end infinite">&nbsp;</span>'},
-  ];
-  var rendered='';
-  lines.forEach(function(l){
-    setTimeout(function(){
-      rendered+=l.h+'
-';
-      term.innerHTML=rendered;
-      term.scrollTop=term.scrollHeight;
-    },l.t);
-  });
-})();
-</script>
 <style>@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}</style>
 
 <!-- STATS (white) -->
@@ -422,7 +362,7 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     <div><div class="stat-n">~2029</div><div class="stat-l" data-en>Estimated CRQC availability — IBM &amp; Google roadmaps</div><div class="stat-l" data-es>Disponibilidad estimada del CRQC — roadmaps IBM y Google</div></div>
     <div><div class="stat-n">4M+</div><div class="stat-l" data-en>TLS certificates exposed globally to quantum risk</div><div class="stat-l" data-es>Certificados TLS expuestos al riesgo cuántico globalmente</div></div>
     <div><div class="stat-n">3 yrs</div><div class="stat-l" data-en>Average migration timeline per NIST estimates</div><div class="stat-l" data-es>Tiempo medio de migración según estimaciones NIST</div></div>
-    <div><div class="stat-n">0%</div><div class="stat-l" data-en>Mid-market firms with a PQC inventory today</div><div class="stat-l" data-es>Empresas mid-market con inventario PQC hoy</div></div>
+    <div><div class="stat-n">30%</div><div class="stat-l" data-en>Organizations with a full cryptographic inventory — IBM IBV, 2025</div><div class="stat-l" data-es>Organizaciones con inventario criptográfico completo — IBM IBV, 2025</div></div>
   </div>
 </div>
 
@@ -433,8 +373,8 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     <div class="sh-label" data-es>La plataforma</div>
     <h2 class="sh-title" data-en>Map. Prioritize. Prove.</h2>
     <h2 class="sh-title" data-es>Mapa. Prioridad. Cumplimiento.</h2>
-    <p class="sh-sub" data-en>Full cryptographic inventory in under 5 minutes. Read-only access, metadata-only, GDPR DPA included. No agents installed. No disruption.</p>
-    <p class="sh-sub" data-es>Inventario criptográfico completo en menos de 5 minutos. Acceso de solo lectura, solo metadatos, DPA GDPR incluido. Sin agentes. Sin interrupciones.</p>
+    <p class="sh-sub" data-en>First inventory delivered in under 24 hours. Read-only access, metadata-only, GDPR DPA included. No agents installed. No disruption.</p>
+    <p class="sh-sub" data-es>Primer inventario entregado en menos de 24 horas. Acceso de solo lectura, solo metadatos, DPA GDPR incluido. Sin agentes. Sin interrupciones.</p>
   </div>
   <div class="platform-grid">
     <div class="p-card">
@@ -470,6 +410,20 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
       <div class="p-tags"><span class="p-tag">requirements.txt</span><span class="p-tag">package.json</span><span class="p-tag">pom.xml</span><span class="p-tag">go.mod</span><span class="p-tag">Cargo.toml</span></div>
     </div>
   </div>
+  <!-- TERMINAL DEMO -->
+  <div style="margin-top:3.5rem;max-width:860px">
+    <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem" data-en>See it in action — live scan output</div>
+    <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem" data-es>Vélo en acción — salida de escaneo en vivo</div>
+    <div style="background:#0d1117;border-radius:12px;border:1px solid rgba(0,0,0,0.15);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12)">
+      <div style="background:#1c2333;padding:11px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,0.07)">
+        <span style="width:11px;height:11px;border-radius:50%;background:#ff5f57;display:inline-block"></span>
+        <span style="width:11px;height:11px;border-radius:50%;background:#febc2e;display:inline-block"></span>
+        <span style="width:11px;height:11px;border-radius:50%;background:#28c840;display:inline-block"></span>
+        <span style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-left:8px">aryzam-scanner — bash</span>
+      </div>
+      <div id="terminal" style="font-family:'Courier New',Courier,monospace;font-size:13px;line-height:1.8;padding:22px 26px;color:#e2e8f0;min-height:60px"></div>
+    </div>
+  </div>
 </section>
 
 <!-- SCORING (dark) -->
@@ -482,11 +436,11 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
       <p class="sh-sub sh-sub-w" data-en>Every asset scored 0–100: algorithm vulnerability × qubit proximity to breaking threshold × HNDL exposure window × temporal urgency to your DORA/NIS2 deadline. CISOs get a ranked action plan, not a spreadsheet to interpret.</p>
       <p class="sh-sub sh-sub-w" data-es>Cada activo puntuado de 0 a 100: vulnerabilidad del algoritmo × proximidad de qubits al umbral de ruptura × ventana HNDL × urgencia temporal hasta tu límite DORA/NIS2. Los CISOs reciben un plan de acción, no una hoja de cálculo.</p>
       <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:.55rem">
-        <span style="font-size:.7rem;color:var(--muted);border:1px solid var(--faint);padding:.22rem .65rem;border-radius:4px">ML-KEM (FIPS 203)</span>
-        <span style="font-size:.7rem;color:var(--muted);border:1px solid var(--faint);padding:.22rem .65rem;border-radius:4px">ML-DSA (FIPS 204)</span>
-        <span style="font-size:.7rem;color:var(--muted);border:1px solid var(--faint);padding:.22rem .65rem;border-radius:4px">SLH-DSA (FIPS 205)</span>
-        <span style="font-size:.7rem;color:var(--muted);border:1px solid var(--faint);padding:.22rem .65rem;border-radius:4px">HNDL Penalty</span>
-        <span style="font-size:.7rem;color:var(--muted);border:1px solid var(--faint);padding:.22rem .65rem;border-radius:4px">Qubit Proximity</span>
+        <span style="font-size:.7rem;color:#4b5563;border:1px solid #d1d5db;padding:.22rem .65rem;border-radius:4px;background:#fff">ML-KEM (FIPS 203)</span>
+        <span style="font-size:.7rem;color:#4b5563;border:1px solid #d1d5db;padding:.22rem .65rem;border-radius:4px;background:#fff">ML-DSA (FIPS 204)</span>
+        <span style="font-size:.7rem;color:#4b5563;border:1px solid #d1d5db;padding:.22rem .65rem;border-radius:4px;background:#fff">SLH-DSA (FIPS 205)</span>
+        <span style="font-size:.7rem;color:#4b5563;border:1px solid #d1d5db;padding:.22rem .65rem;border-radius:4px;background:#fff">HNDL Penalty</span>
+        <span style="font-size:.7rem;color:#4b5563;border:1px solid #d1d5db;padding:.22rem .65rem;border-radius:4px;background:#fff">Qubit Proximity</span>
       </div>
     </div>
     <div class="score-bars">
@@ -504,9 +458,9 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
       <div style="margin-top:.6rem"><div class="sc-row-h"><span class="sc-asset">backup-storage-key <span class="sc-badge b-safe">QUANTUM-SAFE</span></span><span class="sc-val" style="color:#00d4a0">8.1</span></div>
       <div class="sc-track"><div class="sc-fill" style="width:8.1%;background:#00d4a0"></div></div>
       <div class="sc-sub">AES-256 · at_rest · safe</div></div>
-      <div style="margin-top:1rem;padding:.9rem 1.1rem;background:rgba(168,85,247,.07);border:1px solid rgba(168,85,247,.2);border-radius:8px">
-        <p style="font-size:.77rem;color:#c4b5fd;line-height:1.6" data-en><strong style="color:#a855f7">HNDL — Harvest Now, Decrypt Later:</strong> Adversaries are recording encrypted traffic today assuming CRQCs arrive before 2030. These are targets right now — not in 2029.</p>
-        <p style="font-size:.77rem;color:#c4b5fd;line-height:1.6" data-es><strong style="color:#a855f7">HNDL — Harvest Now, Decrypt Later:</strong> Los adversarios graban tráfico cifrado hoy asumiendo CRQCs antes de 2030. Son objetivos ahora mismo — no en 2029.</p>
+      <div style="margin-top:1rem;padding:.9rem 1.1rem;background:#faf5ff;border:1px solid #e9d5ff;border-radius:8px">
+        <p style="font-size:.77rem;color:#6b21a8;line-height:1.6" data-en><strong style="color:#a855f7">HNDL — Harvest Now, Decrypt Later:</strong> Adversaries are recording encrypted traffic today assuming CRQCs arrive before 2030. These are targets right now — not in 2029.</p>
+        <p style="font-size:.77rem;color:#6b21a8;line-height:1.6" data-es><strong style="color:#a855f7">HNDL — Harvest Now, Decrypt Later:</strong> Los adversarios graban tráfico cifrado hoy asumiendo CRQCs antes de 2030. Son objetivos ahora mismo — no en 2029.</p>
       </div>
     </div>
   </div>
@@ -516,12 +470,12 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
 <section class="sec" id="compliance">
   <div class="comp-layout">
     <div class="comp-text">
-      <div class="sh-label" data-en>Regulatory alignment</div>
-      <div class="sh-label" data-es>Alineación regulatoria</div>
+      <div class="sh-label" data-en>Standards we map to</div>
+      <div class="sh-label" data-es>Estándares que mapeamos</div>
       <h2 class="sh-title" data-en>The US created the standard.<br/>Europe created the enforcement.</h2>
       <h2 class="sh-title" data-es>EE.UU. creó el estándar.<br/>Europa creó la obligación.</h2>
-      <p class="sh-sub" style="margin-top:1rem" data-en>AryZam sits at the intersection of both. Every finding maps directly to the framework your auditor will ask about — from DORA Article 6 to NIST SP 800-208.</p>
-      <p class="sh-sub" style="margin-top:1rem" data-es>AryZam está en la intersección de ambos. Cada hallazgo se mapea directamente al marco que tu auditor preguntará — desde el Artículo 6 de DORA hasta NIST SP 800-208.</p>
+      <p class="sh-sub" style="margin-top:1rem" data-en>AryZam sits at the intersection of both. Every finding in your CBOM maps directly to the regulatory framework your auditor will reference — so you arrive to the conversation ready.</p>
+      <p class="sh-sub" style="margin-top:1rem" data-es>AryZam está en la intersección de ambos. Cada hallazgo en tu CBOM se mapea directamente al marco regulatorio que tu auditor referenciará — para que llegues a la conversación preparado.</p>
     </div>
     <div class="reg-grid">
       <span class="reg-tag lit">DORA</span>
@@ -529,12 +483,9 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
       <span class="reg-tag">NIST FIPS 203/204/205</span>
       <span class="reg-tag">NSA CNSA 2.0</span>
       <span class="reg-tag">ENISA PQC Guidelines</span>
-      <span class="reg-tag">ISO/IEC 27001</span>
-      <span class="reg-tag">ENS (España)</span>
-      <span class="reg-tag">GDPR Art. 32</span>
-      <span class="reg-tag">OMB M-23-02</span>
-      <span class="reg-tag">BSI TR-02102</span>
       <span class="reg-tag">NIST SP 800-208</span>
+      <span class="reg-tag">OMB M-23-02</span>
+      <span class="reg-tag">GDPR Art. 32</span>
     </div>
   </div>
 </section>
@@ -582,7 +533,7 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
           <td style="padding:1rem 1.25rem;font-weight:600;color:#374151" data-en>Time to first inventory</td>
           <td style="padding:1rem 1.25rem;font-weight:600;color:#374151" data-es>Tiempo al primer inventario</td>
           <td style="padding:1rem 1.25rem;text-align:center;background:#eff6ff;border-left:2px solid var(--blue);border-right:2px solid var(--blue)">
-            <span style="font-weight:700;color:var(--blue)">&lt; 5 minutes</span>
+            <span style="font-weight:700;color:var(--blue)">&lt; 24 hours</span>
           </td>
           <td style="padding:1rem 1.25rem;text-align:center;color:#6b7280" data-en>Months (integration)</td>
           <td style="padding:1rem 1.25pm;text-align:center;color:#6b7280" data-en>3–6 months</td>
@@ -676,15 +627,6 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
   </div>
   <div class="team-grid">
     <div class="tm-card">
-      <div class="tm-av">Z</div>
-      <div class="tm-name">Zayra Zambrano</div>
-      <div class="tm-role" data-en>Co-founder &amp; CEO</div>
-      <div class="tm-role" data-es>Co-fundadora &amp; CEO</div>
-      <p class="tm-bio" data-en>25+ years in enterprise IT and B2B sales across Spain and LATAM. Designed and built the AryZam prototype end-to-end. The CISO network that generates the first clients.</p>
-      <p class="tm-bio" data-es>Más de 25 años en ventas enterprise IT y B2B en España y LATAM. Diseñó y construyó el prototipo de AryZam de principio a fin. La red de CISOs que genera los primeros clientes.</p>
-      <div class="tm-tags"><span class="tm-tag">Enterprise Sales</span><span class="tm-tag">Cloud Architecture</span><span class="tm-tag">Salesforce Certified</span><span class="tm-tag">GCP</span></div>
-    </div>
-    <div class="tm-card">
       <div class="tm-av">A</div>
       <div class="tm-name">Ariadna Gómez Zambrano</div>
       <div class="tm-role" data-en>Co-founder &amp; CTO</div>
@@ -692,6 +634,15 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
       <p class="tm-bio" data-en>Electrical &amp; Computer Engineering, Princeton University (Class of 2029). IBM Qiskit Advocate. Builds the scoring engine and quantum physics foundation.</p>
       <p class="tm-bio" data-es>Ingeniería Eléctrica y de Computadores, Universidad de Princeton (Clase de 2029). IBM Qiskit Advocate. Construye el motor de scoring y la base de física cuántica.</p>
       <div class="tm-tags"><span class="tm-tag">Quantum Computing</span><span class="tm-tag">IBM Qiskit Advocate</span><span class="tm-tag">Princeton ECE 2029</span><span class="tm-tag">QWorld Nickel</span></div>
+    </div>
+    <div class="tm-card">
+      <div class="tm-av">Z</div>
+      <div class="tm-name">Zayra Zambrano</div>
+      <div class="tm-role" data-en>Co-founder &amp; CEO</div>
+      <div class="tm-role" data-es>Co-fundadora &amp; CEO</div>
+      <p class="tm-bio" data-en>25+ years in enterprise IT and B2B sales across Spain and LATAM. Designed and built the AryZam prototype end-to-end. The CISO network that generates the first clients.</p>
+      <p class="tm-bio" data-es>Más de 25 años en ventas enterprise IT y B2B en España y LATAM. Diseñó y construyó el prototipo de AryZam de principio a fin. La red de CISOs que genera los primeros clientes.</p>
+      <div class="tm-tags"><span class="tm-tag">Enterprise Sales</span><span class="tm-tag">Cloud Architecture</span><span class="tm-tag">Salesforce Certified</span><span class="tm-tag">GCP</span></div>
     </div>
   </div>
 </section>
@@ -705,11 +656,11 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     <h2 data-es>¿Cuántos activos vulnerables<br/>tienes en producción?</h2>
     <p class="wl-sub" data-en>Be the first to know. Join the waitlist — companies seeking a scan and early investors.</p>
     <p class="wl-sub" data-es>Sé el primero en saberlo. Únete a la lista de espera — empresas e inversores tempranos.</p>
-    <div class="wl-form">
+    <form class="wl-form" action="https://formspree.io/f/xyekajby" method="POST">
       <div>
         <label class="wl-label" data-en>I am</label>
         <label class="wl-label" data-es>Soy</label>
-        <select class="wl-select">
+        <select class="wl-select" name="role">
           <option data-en>A company / CISO — I want a scan</option>
           <option data-es>Una empresa / CISO — quiero un scan</option>
           <option data-en>An investor — I want to learn more</option>
@@ -722,23 +673,23 @@ footer{background:#0a1c42;border-top:1px solid rgba(255,255,255,.06);padding:2.5
         <div>
           <label class="wl-label" data-en>Name</label>
           <label class="wl-label" data-es>Nombre</label>
-          <input class="wl-input" type="text" placeholder="Your name" data-en/>
-          <input class="wl-input" type="text" placeholder="Tu nombre" data-es/>
+          <input class="wl-input" type="text" name="name" placeholder="Your name" data-en/>
+          <input class="wl-input" type="text" name="name" placeholder="Tu nombre" data-es/>
         </div>
         <div>
           <label class="wl-label">Email</label>
-          <input class="wl-input" type="email" placeholder="you@company.com"/>
+          <input class="wl-input" type="email" name="email" placeholder="you@company.com" required/>
         </div>
       </div>
       <div>
         <label class="wl-label" data-en>Company</label>
         <label class="wl-label" data-es>Empresa</label>
-        <input class="wl-input" type="text" placeholder="Your company" data-en/>
-        <input class="wl-input" type="text" placeholder="Tu empresa" data-es/>
+        <input class="wl-input" type="text" name="company" placeholder="Your company" data-en/>
+        <input class="wl-input" type="text" name="company" placeholder="Tu empresa" data-es/>
       </div>
-      <button class="wl-submit" data-en>Sign me up →</button>
-      <button class="wl-submit" data-es>Apuntarme →</button>
-    </div>
+      <button class="wl-submit" type="submit" data-en>Sign me up →</button>
+      <button class="wl-submit" type="submit" data-es>Apuntarme →</button>
+    </form>
   </div>
 </section>
 
@@ -760,6 +711,67 @@ function setLang(l){
   document.getElementById('btn-en').classList.toggle('active',l==='en');
   document.getElementById('btn-es').classList.toggle('active',l==='es');
 }
+</script>
+<script>
+(function(){
+  var term = document.getElementById('terminal');
+  if(!term) return;
+  function cyan(s){return'<span style="color:#1d4ed8">'+s+'</span>'}
+  function green(s){return'<span style="color:#15803d">'+s+'</span>'}
+  function red(s){return'<span style="color:#dc2626">'+s+'</span>'}
+  function orange(s){return'<span style="color:#d97706">'+s+'</span>'}
+  function purple(s){return'<span style="color:#7c3aed">'+s+'</span>'}
+  function muted(s){return'<span style="color:#9ca3af">'+s+'</span>'}
+  function bold(s){return'<span style="font-weight:700">'+s+'</span>'}
+  var lines=[
+    {t:0,    h:muted('$')+' python main.py --mode live --codescan ./repo --deps-scan ./repo'},
+    {t:600,  h:''},
+    {t:800,  h:cyan('checkmark')+' [1/4] Scanning cryptographic assets...'},
+    {t:1400, h:'  '+muted('arrow')+' AWS KMS + ACM:         '+cyan('14 assets')+' '+muted('(eu-west-1, us-east-1, ap-southeast-1)')},
+    {t:1900, h:'  '+muted('arrow')+' Azure Key Vault:       '+cyan('11 assets')+' '+muted('(westeurope, northeurope)')},
+    {t:2400, h:'  '+muted('arrow')+' M365 S/MIME certs:     '+cyan('50 assets')},
+    {t:2900, h:'  '+muted('arrow')+' GitHub SSH keys:       '+cyan('23 assets')},
+    {t:3400, h:'  '+muted('arrow')+' Source code scan:      '+orange('8 findings')+' '+muted('(RSA-1024 keygen, hardcoded SHA-1)')},
+    {t:3900, h:'  '+muted('arrow')+' Dependency scan:       '+orange('12 findings')+' '+muted('(cryptography<41.0, paramiko<3.4)')},
+    {t:4400, h:''},
+    {t:4600, h:cyan('checkmark')+' [2/4] Quantum Advantage Matrix scoring...'},
+    {t:5400, h:'  '+red(bold('CRITICAL: 31'))+'   '+orange('HIGH: 28')+'   '+muted('MEDIUM: 17')+'   '+purple('HNDL targets: 49')},
+    {t:5900, h:''},
+    {t:6100, h:cyan('checkmark')+' [3/4] Generating reports...'},
+    {t:6600, h:'  '+muted('arrow')+' dashboard.html  report.pdf  playbook.md  cbom.json'},
+    {t:7100, h:''},
+    {t:7300, h:green('checkmark')+' [4/4] '+bold('Done.')+' '+cyan('118 assets')+' scored. First inventory ready.'},
+    {t:7900, h:''},
+    {t:8100, h:'  '+red('!')+' '+bold(red('31 CRITICAL'))+' assets require immediate migration'},
+    {t:8500, h:'  '+purple('!')+' '+bold(purple('49 HNDL targets'))+' -- traffic being recorded today'},
+    {t:8900, h:'  '+orange('>')+' DORA/NIS2 compliance: '+red(bold('NON-COMPLIANT'))},
+    {t:9400, h:'  '+cyan('>')+' Migration playbook: '+cyan('playbook.md')+' '+muted('(FIPS 203/204/205 aligned)')},
+    {t:10000,h:''},
+    {t:10200,h:muted('$')+' _'},
+  ];
+  lines = lines.map(function(l){
+    return {t:l.t, h:l.h.replace(/checkmark/g,'&#10003;').replace(/arrow/g,'&rarr;')};
+  });
+  var started = false;
+  function runAnimation(){
+    if(started) return;
+    started = true;
+    var rendered = '';
+    lines.forEach(function(l){
+      setTimeout(function(){
+        rendered += l.h + '\n';
+        term.innerHTML = rendered;
+        term.scrollTop = term.scrollHeight;
+      }, l.t);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ runAnimation(); obs.disconnect(); }});
+    },{threshold:0.3});
+    obs.observe(term);
+  } else { runAnimation(); }
+})();
 </script>
 </body>
 </html>

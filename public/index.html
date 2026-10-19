@@ -656,8 +656,12 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
     <h2 data-es>Sé el primero en conocer<br/>tu riesgo cuántico</h2>
     <p class="wl-sub" data-en>Be the first to know. Join the waitlist — companies seeking a scan and early investors.</p>
     <p class="wl-sub" data-es>Sé el primero en saberlo. Únete a la lista de espera — empresas e inversores tempranos.</p>
-    <form class="wl-form" action="https://formspree.io/f/xyekajby" method="POST">
-      <input type="hidden" name="_next" value="https://aryzam.com/#waitlist"/>
+    <div id="wl-success" style="display:none;padding:2rem 0;text-align:center">
+      <div style="font-size:2.5rem;margin-bottom:1rem">✅</div>
+      <p style="color:#fff;font-size:1.1rem;font-weight:600" data-en>You're on the list! We'll be in touch soon.</p>
+      <p style="color:#fff;font-size:1.1rem;font-weight:600" data-es>¡Estás en la lista! Te contactaremos pronto.</p>
+    </div>
+    <form class="wl-form" id="wl-form" action="https://formspree.io/f/xyekajby" method="POST">
       <div>
         <label class="wl-label" data-en>I am</label>
         <label class="wl-label" data-es>Soy</label>
@@ -732,6 +736,28 @@ document.addEventListener('DOMContentLoaded',function(){
   if(sel && otherField){
     sel.addEventListener('change',function(){
       otherField.style.display = this.value === 'other' ? 'block' : 'none';
+    });
+  }
+  var form = document.getElementById('wl-form');
+  var success = document.getElementById('wl-success');
+  if(form && success){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var data = new FormData(form);
+      fetch('https://formspree.io/f/xyekajby',{
+        method:'POST',
+        body:data,
+        headers:{Accept:'application/json'}
+      }).then(function(r){
+        if(r.ok){
+          form.style.display='none';
+          success.style.display='block';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      }).catch(function(){
+        alert('Something went wrong. Please try again.');
+      });
     });
   }
 });

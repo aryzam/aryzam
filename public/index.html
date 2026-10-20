@@ -108,7 +108,7 @@ nav{
   font-size:1.1rem;color:rgba(255,255,255,0.82);
   max-width:600px;margin:0 auto 2.5rem;line-height:1.75;
 }
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.25rem}
+.hero-btns{display:flex;gap:1.5rem 2rem;justify-content:center;flex-wrap:wrap;margin:2rem 0 2.25rem;align-items:center}
 .btn-hero-p{
   font-size:0.95rem;font-weight:700;
   padding:0.85rem 2rem;
@@ -353,19 +353,21 @@ footer nav{background:transparent;border-bottom:none;padding:0;height:auto;posit
   <h1 data-es>Alguien está grabando tu<br/><em>tráfico cifrado</em> ahora mismo.</h1>
   <p class="hero-sub" data-en>In 2029 they'll be able to read it. Migration takes 3 years. Most companies have no idea how many vulnerable cryptographic assets they have — or where.</p>
   <p class="hero-sub" data-es>En 2029 podrán leerlo. La migración tarda 3 años. La mayoría de empresas no sabe cuántos activos criptográficos vulnerables tiene — ni dónde están.</p>
-  <div class="hero-impact" data-en>
-    <span class="hi-stat"><span class="hi-n">118</span><span class="hi-l">cryptographic assets found</span></span>
+  <div style="display:flex;justify-content:center;margin:1.5rem 0 0">
+  <div class="hero-impact" data-en style="margin:0">
+    <span class="hi-stat"><span class="hi-n">118</span><span class="hi-l">assets found</span></span>
     <span class="hi-div"></span>
-    <span class="hi-stat"><span class="hi-n hi-red">31</span><span class="hi-l">critical — migrate now</span></span>
+    <span class="hi-stat"><span class="hi-n hi-red">31</span><span class="hi-l">critical now</span></span>
     <span class="hi-div"></span>
-    <span class="hi-stat"><span class="hi-n">4 hrs</span><span class="hi-l">to full inventory</span></span>
+    <span class="hi-stat"><span class="hi-n">4 hrs</span><span class="hi-l">full inventory</span></span>
   </div>
-  <div class="hero-impact" data-es>
-    <span class="hi-stat"><span class="hi-n">118</span><span class="hi-l">activos criptográficos encontrados</span></span>
+  <div class="hero-impact" data-es style="margin:0">
+    <span class="hi-stat"><span class="hi-n">118</span><span class="hi-l">activos en riesgo</span></span>
     <span class="hi-div"></span>
-    <span class="hi-stat"><span class="hi-n hi-red">31</span><span class="hi-l">críticos — migrar ya</span></span>
+    <span class="hi-stat"><span class="hi-n hi-red">31</span><span class="hi-l">críticos ya</span></span>
     <span class="hi-div"></span>
-    <span class="hi-stat"><span class="hi-n">4 h</span><span class="hi-l">para inventario completo</span></span>
+    <span class="hi-stat"><span class="hi-n">4 h</span><span class="hi-l">inventario completo</span></span>
+  </div>
   </div>
   <div class="hero-btns">
     <a href="#waitlist" class="btn-hero-p">
@@ -393,7 +395,7 @@ footer nav{background:transparent;border-bottom:none;padding:0;height:auto;posit
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 .hero-impact{
   display:flex;align-items:center;gap:1.5rem;flex-wrap:nowrap;
-  margin:1.5rem 0 0;
+  margin:1.5rem auto 0 0;
   padding:1rem 1.4rem;
   background:rgba(255,255,255,0.1);
   border:1px solid rgba(255,255,255,0.2);

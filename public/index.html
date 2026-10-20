@@ -856,12 +856,14 @@ footer nav{background:transparent;border-bottom:none;padding:0;height:auto;posit
 <!-- WAITLIST (dark) -->
 <section class="wl-sec" id="waitlist">
   <div class="wl-inner">
+    <div id="wl-header">
     <div class="sh-label" data-en>Join us</div>
     <div class="sh-label" data-es>Únete</div>
     <h2 data-en>Request a scan.<br/>We'll be in touch.</h2>
     <h2 data-es>Solicita tu escaneo.<br/>Te respondemos en 24h.</h2>
     <p class="wl-sub" data-en>Tell us about your infrastructure — we'll get back to you with pricing and next steps. Also open to early investors.</p>
     <p class="wl-sub" data-es>Cuéntanos sobre tu infraestructura — te respondemos con precio y siguientes pasos. Abierto también a inversores.</p>
+    </div>
     <div id="wl-success" style="display:none;padding:2.5rem 1rem;text-align:center;max-width:520px;margin:0 auto">
       <div style="font-size:3rem;margin-bottom:1.2rem;color:#fff">✓</div>
       <!-- default (non-investor) -->
@@ -992,6 +994,8 @@ document.addEventListener('DOMContentLoaded',function(){
       }).then(function(r){
         if(r.ok){
           form.style.display='none';
+          var header = document.getElementById('wl-header');
+          if(header) header.style.display='none';
           var isInvestor = sel && sel.value === 'investor';
           ['msg-default-en','msg-default-es','msg-default-sub-en','msg-default-sub-es'].forEach(function(id){
             var el=document.getElementById(id);

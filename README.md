@@ -14,8 +14,9 @@ I work where **quantum, security and AI** meet.
 
 | Project | What it does |
 |---|---|
-| [aryzam-scanner](https://github.com/zayraz/aryzam-scanner) | Python scanner that inventories cryptography in cloud environments (AWS ACM/KMS), scores quantum risk and maps findings to DORA / NIS2 / ENS controls. |
+| [AryZam scanner](https://github.com/aryzam/aryzam-showcase) | Python scanner that inventories cryptography in cloud environments (AWS ACM/KMS), scores quantum risk and maps findings to DORA / NIS2 / ENS controls. |
 | [aryzam.com](https://aryzam.com) | Company site built with Next.js on Cloudflare Workers. |
+| [the-trust-frontier](https://github.com/aryzam/the-trust-frontier) | Website for The Trust Frontier, a publication on AI trust and sycophancy. |
 
 ## 🧰 Tools
 

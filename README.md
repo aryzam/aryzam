@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hi, I'm Ariadna 👋
 
-## Getting Started
+Electrical & Computer Engineering student at **Princeton University** (Class of 2029), concentrating in Quantum Information and Applied Physics, with minors in Applied & Computational Mathematics and Computing, Society & Policy.
 
-First, run the development server:
+I work where **quantum, security and AI** meet.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔭 What I'm working on
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **[AryZam](https://aryzam.com)**: Co-founder & CTO. Post-quantum cryptography risk assessment for European organisations under DORA, NIS2 and ENS.
+- **AI Exploration Lab @ Princeton (Fall 2026)**: SWE4, *An AI can write code that works. Can it write code that is fast?*
+- **[The Trust Frontier](https://thetrustfrontier.com/)**: Writing on AI trust and sycophancy. Also a contributor to *Princeton AI Review*.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Highlighted projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Project | What it does |
+|---|---|
+| [aryzam-scanner](https://github.com/zayraz/aryzam-scanner) | Python scanner that inventories cryptography in cloud environments (AWS ACM/KMS), scores quantum risk and maps findings to DORA / NIS2 / ENS controls. |
+| [aryzam.com](https://aryzam.com) | Company site built with Next.js on Cloudflare Workers. |
 
-## Learn More
+## 🧰 Tools
 
-To learn more about Next.js, take a look at the following resources:
+Python · SQL · Next.js · AWS · Git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📫 Find me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[LinkedIn](https://www.linkedin.com/in/ariadna-zambrano) · [The Trust Frontier](https://thetrustfrontier.com/) · [AryZam](https://aryzam.com)

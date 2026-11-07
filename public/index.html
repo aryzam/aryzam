@@ -299,11 +299,20 @@ footer{background:#1e3a8a;border-top:1px solid rgba(255,255,255,.1);padding:2.5r
 .ft-logo{font-family:var(--fd);font-size:1.1rem;font-weight:800;color:rgba(255,255,255,.75);text-decoration:none}
 .ft-logo em{font-style:normal;color:#bfdbfe}
 footer nav{background:transparent;border-bottom:none;padding:0;height:auto;position:static;display:flex;align-items:center;justify-content:flex-start}
-.ft-links{display:flex;gap:1.75rem}
+.ft-links{display:flex;flex-wrap:wrap;gap:.75rem 1.75rem}
 .ft-links a{font-size:.78rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .15s}
 .ft-links a:hover{color:rgba(255,255,255,.9)}
 .ft-copy{font-size:.75rem;color:rgba(255,255,255,.4);width:100%;margin-top:.5rem}
 
+.cta-short{display:none}
+@media(max-width:600px){
+  nav{padding:0 4%;gap:.5rem}
+  .nav-logo svg{height:26px;width:auto}
+  .nav-right{gap:.5rem}
+  .nav-cta{padding:.5rem .8rem;font-size:.8rem;white-space:nowrap}
+  .cta-long{display:none!important}
+  .cta-short{display:inline}
+}
 @media(max-width:780px){
   .nav-links{display:none}
   .score-inner{grid-template-columns:1fr;gap:3rem}
@@ -332,8 +341,10 @@ footer nav{background:transparent;border-bottom:none;padding:0;height:auto;posit
       <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
     </div>
     <a href="#waitlist" class="nav-cta">
-      <span data-en>See your quantum exposure →</span>
-      <span data-es>Ver tu exposición cuántica →</span>
+      <span class="cta-long" data-en>See your quantum exposure →</span>
+      <span class="cta-long" data-es>Ver tu exposición cuántica →</span>
+      <span class="cta-short" data-en>Get a scan →</span>
+      <span class="cta-short" data-es>Pedir escaneo →</span>
     </a>
   </div>
 </nav>
